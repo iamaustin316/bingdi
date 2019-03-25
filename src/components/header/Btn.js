@@ -12,15 +12,23 @@ const ALink = styled.a`
     &:hover {
         color: #333;
     }
+    @media (max-width: 800px) {
+       padding: 0 8px;
+    }
 `
 
 class Btn extends Component {
     constructor(props) {
         super(props)
     }
+    btnClickFN = (event)=>{
+        event.preventDefault()
+        event.stopPropagation()
+        console.log(this.props.url)
+    }
     render() { 
         return (
-            <ALink href={this.props.url}>{this.props.name}</ALink>
+            <ALink onClick={this.btnClickFN} href={this.props.url}>{this.props.name}</ALink>
         );
     }
 }
