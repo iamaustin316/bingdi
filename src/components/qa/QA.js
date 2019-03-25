@@ -4,13 +4,12 @@ import QAItem from './QAItem';
 import Title from '../Title'
 
 const QAwrap = styled.div`
-    background-color: #2e251d;
     padding: 80px 0;
 `
 const QAInner = styled.div`
-    width: 1200px;
+    width: 960px;
     margin: 0 auto;
-    @media (max-width: 800px) {
+    @media (max-width: 980px) {
         width: auto;
         padding: 0 16px;
     }

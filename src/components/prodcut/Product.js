@@ -8,7 +8,6 @@ import productImage3 from '../../images/product-3.png'
 import productImage4 from '../../images/product-4.png'
 
 const ProductWrap = styled.div`
-    background-color: #2e251d;
     padding: 80px 0;
 `
 

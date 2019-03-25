@@ -6,7 +6,7 @@ const ProductItem = styled.div`
     img {
         max-width: 64%;
         display: block;
-        margin: 0 auto 16px auto;
+        margin: 0 auto 32px auto;
     }
     h2 {
         font-size: 20px;
@@ -16,7 +16,7 @@ const ProductItem = styled.div`
         padding: 0;
     }
     p {
-        font-size: 14px;
+        font-size: 12px;
         color: #a18d7a;
         text-align: center;
         margin: 0 0 8px;
@@ -38,10 +38,10 @@ const ProductItem = styled.div`
 const PriceItem = styled.div`
     text-align: center;
     span {
-        font-family: 'Roboto Condensed', sans-serif;
         font-size: 14px;
         color: #fff;
         padding: 0 4px;
+        display: block;
     }
     small {
         font-size: 14px;
@@ -50,6 +50,7 @@ const PriceItem = styled.div`
     }
     span:nth-child(1) {
         text-decoration: line-through;
+        margin-bottom: 8px;
     }
     span:nth-child(2) {
         font-size: 24px;

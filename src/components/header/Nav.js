@@ -12,19 +12,25 @@ class Nav extends Component {
         this.state = {
             navName: [
                 {
-                    name: '關於我們',
-                    url: '#about'
+                    name: '商品介紹',
+                    url: '#product'
                 },
                 {
-                    name: '產品介紹',
-                    url: '#product'
+                    name: '訂購方式',
+                    url: '#howtobuy'
                 }
                 ,{
-                    name: '問與答',
-                    url: '#qa'
+                    name: '付款方式',
+                    url: '#payment'
                 },{
-                    name: '聯絡我們',
-                    url: '#contact'
+                    name: '品牌故事 ',
+                    url: '#story'
+                },{
+                    name: '問與答 ',
+                    url: '#qma'
+                },{
+                    name: '注意事項',
+                    url: '#remind'
                 }
             ]
         }

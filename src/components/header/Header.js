@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const SiteHeader = styled.div`
     width: 100%;
     height: 48px;
-    background-color: #eee;
+    background-color: #f6f6f6;
     display: flex;
     justify-content: space-between;
     padding: 0 16px;

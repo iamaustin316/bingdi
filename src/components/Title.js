@@ -2,13 +2,25 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TitleText = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    position: relative;
+    &::after {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        transform: translate3d(-50%,0,0);
+    }
     h2 {
         font-size: 24px;
         color: #fff;
         text-align: center;
         margin: 0 0 8px;
         padding: 0;
+        font-weight: 300;
     }
     p {
         margin: 0;
