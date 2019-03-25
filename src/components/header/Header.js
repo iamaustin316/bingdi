@@ -11,6 +11,8 @@ const SiteHeader = styled.div`
     justify-content: space-between;
     padding: 0 16px;
     box-sizing: border-box;
+    position: relative;
+    z-index: 4;
 `
 
 class Header extends Component {

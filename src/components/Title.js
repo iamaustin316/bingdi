@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TitleText = styled.div`
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     h2 {
         font-size: 24px;
         color: #fff;
