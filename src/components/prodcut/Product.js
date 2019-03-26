@@ -12,7 +12,7 @@ const ProductWrap = styled.div`
 `
 
 const ProductInner = styled.div`
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     @media (max-width: 800px) {

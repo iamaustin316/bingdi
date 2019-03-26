@@ -21,6 +21,13 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
+        test: /\.woff(2)?(\?[a-z0-9]+)?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff?name=fonts/[name].[ext]"
+      }, {
+        test: /\.(ttf|eot|svg)(\?[a-z0-9]+)?$/,
+        loader: "file-loader?name=fonts/[name].[ext]"
+      },
+      {
           test: /\.(jpe?g|gif|png|svg)$/i,
           use: [
             'file-loader?name=image/[name].[ext]',
