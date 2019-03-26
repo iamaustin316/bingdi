@@ -42,6 +42,7 @@ const KvHeading = styled.div`
         }
     }
     button {
+        color: #4b3b2f;
         border: solid 1px #4b3b2f;
         display: inline-block;
         padding: 0 64px;
@@ -49,10 +50,16 @@ const KvHeading = styled.div`
         height: 48px;
         line-height: 48px;
         font-size: 16px;
+        transition: color 300ms ease-in-out,background-color 100ms ease-in-out;
+        cursor: pointer; 
         @media (max-width: 800px) {
             height: 40px;
             line-height: 40px;
             padding: 0 32px;
+        }
+        &:hover {
+            background-color: #4b3b2f;
+            color: #fff;
         }
     }
 `
