@@ -33,7 +33,7 @@ const KvHeading = styled.div`
         color: #4b3b2f;
         letter-spacing: 10px;
         line-height: 1.6;
-        margin: 0 0 8px;
+        margin: 0 0 16px;
         strong {
             display: block;
         }
@@ -65,13 +65,21 @@ const KvHeading = styled.div`
 `
 
 class Kv extends Component {
-    state = {  }
+    constructor(props) {
+        super(props);
+        this.state = {  }
+    }
+    clickBuyFN = (e)=> {
+        console.log(e.target)
+        let win = window.open('https://goo.gl/forms/i1EwwtNNC3O28fcg2', '_blank');
+        win.focus();
+    }
     render() { 
         return (
             <KvSection>
                 <KvHeading>
                     <h2>回甘的咖啡<strong>要用時間來等待</strong></h2>
-                    <button type="button">馬上體驗</button>
+                    <button onClick={this.clickBuyFN} type="button">馬上體驗</button>
                 </KvHeading>
                 <picture>
                     <source srcSet={kvImgM} media="(max-width: 50em) and (orientation: portrait)" />

@@ -5,7 +5,11 @@ import Kv from './components/kv/Kv'
 import Product from './components/prodcut/Product'
 import QA from './components/qa/QA'
 import HowToBuy from './components/buy/HowToBuy'
+import Payment from './components/payment/Payment'
 import Story from './components/story/Story'
+import Remind from './components/remind/Remind'
+import ReturnPolicy from './components/returnPolicy/ReturnPolicy'
+import Footer from './components/footer/Footer'
 import Normalize from 'normalize.css'
 import baseCss from './css/App.css'
 
@@ -18,8 +22,12 @@ class App extends Component {
                 <Kv></Kv>
                 <Product></Product>
                 <HowToBuy></HowToBuy>
+                <Payment></Payment>
                 <Story></Story>
                 <QA></QA>
+                <Remind></Remind>
+                <ReturnPolicy></ReturnPolicy>
+                <Footer></Footer>
             </div>
         );
     }

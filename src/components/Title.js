@@ -20,7 +20,7 @@ const TitleText = styled.div`
         text-align: center;
         margin: 0 0 8px;
         padding: 0;
-        font-weight: 300;
+        font-weight: 500;
     }
     p {
         margin: 0;

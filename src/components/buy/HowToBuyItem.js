@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
 const HowToBuyItem = styled.div`
   width: 25%;
@@ -29,7 +29,7 @@ const HowToBuyItem = styled.div`
 const Icons = styled.div`
   width: 128px;
   height: 128px;
-  background-color: #564337;
+  background-color: #fff;
   border-radius: 50%;
   margin: 0 auto 16px;
   display: flex;
@@ -43,13 +43,13 @@ const Icons = styled.div`
 `
 const Remind = styled.li`
   font-size: 12px;
-  color: #fff;
+  color: #d4c7bf;
   line-height: 1.6;
   padding-left: 32px;
   position: relative;
-  border-top: solid 1px #695346;
-  padding-top: 8px;
-  margin-bottom: 8px;
+  border-top: solid 1px #41342c;
+  padding-top: 16px;
+  margin-bottom: 16px;
   &:last-child {
     border-bottom: 0;
   }
@@ -58,8 +58,8 @@ const Remind = styled.li`
 const TypeTitle = styled.strong`
   position: absolute;
   left: 0;
-  top: 8px;
-  color: #a28f84;
+  top: 16px;
+  color: #fff;
 `
 
 class HowToBuyItems extends Component {

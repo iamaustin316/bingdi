@@ -11,13 +11,13 @@ const QAItems = styled.div`
     }
 `
 const QAItemsQuestion = styled.div`
-    color: #b8a898;
+    color: #fff;
     font-size: 14px;
     line-height: 1.6;
     border-bottom: solid 1px #736354;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    margin-bottom: 8px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    margin-bottom: 16px;
     font-weight: 700;
     position: relative;
     word-break: break-all;
@@ -25,25 +25,26 @@ const QAItemsQuestion = styled.div`
         content: "Q";
         position: absolute;
         left: 0;
-        top: 0;
+        top: -1px;
         font-size: 14px;
-        color: #b8a898;
+        color: #fff;
     }
 `
 const QAItemsAnswer = styled.div`
-    color: #fff;
+    color: #d4c7bf;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.8;
     position: relative;
-    padding-left: 16px;
+    padding-left: 24px;
     word-break: break-all;
+    letter-spacing: 1px;
     &::before {
         content: "A";
         position: absolute;
         left: 0;
-        top: 0;
+        top: -1px;
         font-size: 14px;
-        color: #fff;
+        color: #d4c7bf;
     }
 `
 class QAItem extends Component {
