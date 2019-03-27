@@ -36,13 +36,13 @@ module.exports = {
                 options: {
                     mozjpeg: {
                         progressive: false,
-                        quality: 70
+                        quality: 60
                     },
                     optipng: {
                         enabled: false,
                     },
                     pngquant: {
-                        quality: '60-75',
+                        quality: '55-60',
                         speed: 4
                     },
                     gifsicle: {
