@@ -30,27 +30,31 @@ class Index extends Component {
                 {
                     imageUrl: productImage1,
                     name: '經典冰滴',
-                    desc: '北義咖啡豆',
+                    desc: '肯亞特選豆',
+                    ml: '300',
                     oriPrice: '200',
                     salePrice: '150'
                 },{
                     imageUrl: productImage2,
-                    name: '水果冰滴',
-                    desc: '北義咖啡豆',
+                    name: '冰滴拿鐵',
+                    desc: '肯亞特選豆',
+                    ml: '300',
                     oriPrice: '200',
                     salePrice: '150'
                 },{
                     imageUrl: productImage3,
-                    name: '拿鐵冰滴',
-                    desc: '北義咖啡豆',
+                    name: '冰滴蜜咖啡',
+                    desc: '肯亞特選豆',
+                    ml: '300',
                     oriPrice: '200',
                     salePrice: '150'
                 },{
                     imageUrl: productImage4,
-                    name: '主廚冰滴',
-                    desc: '北義咖啡豆',
-                    oriPrice: '200',
-                    salePrice: '150'
+                    name: '果戀冰滴',
+                    desc: '肯亞特選豆',
+                    ml: '300',
+                    oriPrice: '180',
+                    salePrice: '130'
                 }
             ]
         }
@@ -62,7 +66,7 @@ class Index extends Component {
                 <ProductInner>
                 {
                     this.state.products.map((el,index)=>{
-                        return <ProductItems key={index} imageUrl={el.imageUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice}></ProductItems>
+                        return <ProductItems key={index} imageUrl={el.imageUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
                     })
                 }
                 </ProductInner>

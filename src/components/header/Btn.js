@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const ALink = styled.a`
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
     text-decoration: none;
     padding: 0 16px;

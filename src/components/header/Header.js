@@ -13,6 +13,7 @@ const SiteHeader = styled.div`
     box-sizing: border-box;
     position: relative;
     z-index: 4;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 `
 
 class Header extends Component {

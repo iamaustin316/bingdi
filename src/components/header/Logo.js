@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import LogoImg from '../../images/bing-di-logo@3x.png'
 
 const H1 = styled.h1`
     font-size: 16px;
@@ -8,6 +9,12 @@ const H1 = styled.h1`
     line-height: 48px;
     margin: 0;
     padding: 0;
+    img {
+        position: relative;
+        top: 8px;
+        height: 32px;
+        display: block;
+    }
 `
 
 class Logo extends Component {
@@ -16,7 +23,9 @@ class Logo extends Component {
     }
     render() { 
         return (
-            <H1>{this.props.name}</H1>
+            <H1>
+                <img src={LogoImg} alt="冰帝咖啡"/>
+            </H1>
         );
     }
 }
