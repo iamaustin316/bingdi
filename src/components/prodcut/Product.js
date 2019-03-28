@@ -61,7 +61,7 @@ class Index extends Component {
     }
     render() { 
         return (
-            <ProductWrap id={this.props.idName}>
+            <ProductWrap id={this.props.idName} data-block>
                 <Title title="產品介紹" desc="product"></Title>
                 <ProductInner>
                 {

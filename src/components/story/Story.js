@@ -4,7 +4,7 @@ import Title from '../Title'
 import StoryIamgeWall from './StoryImageWall'
 import StoryItem from './StoryItem'
 
-const StoryWrap = styled.div`
+const StoryWrap = styled.section`
     padding: 80px 0;
 `
 
@@ -39,7 +39,7 @@ class Story extends Component {
   }
   render() { 
     return (
-      <StoryWrap id={this.props.idName}>
+      <StoryWrap id={this.props.idName} data-block>
         <Title title='品牌故事' desc='story'></Title>
         <StoryIamgeWall></StoryIamgeWall>
         <StoryInner>

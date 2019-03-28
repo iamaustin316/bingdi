@@ -14,6 +14,7 @@ import Normalize from 'normalize.css'
 import baseCss from './css/App.css'
 import styled from 'styled-components';
 import ScrollPageTo from './components/ScrollPageTop'
+import _ from 'lodash'
 
 const BtnTop = styled.button`
     z-index: 100;
@@ -62,26 +63,60 @@ class App extends Component {
     componentDidMount = ()=> {
         const btnGoTop = document.querySelector('#btn-top')
         const siteHeader = document.querySelector('#siteHeader')
-        window.addEventListener('scroll',(e)=>{
-            if(window.pageYOffset >= 1) {
-                document.body.style.paddingTop = siteHeader.offsetHeight + 'px'
-                siteHeader.classList.add('is-fixed')
-            } else {
-                document.body.style.paddingTop = 0
-                siteHeader.classList.remove('is-fixed')
+        const sections = document.querySelectorAll('section')
+        window.addEventListener('scroll',_.debounce(
+            (e)=>{ 
+                if(window.pageYOffset >= 1) {
+                    document.body.style.paddingTop = siteHeader.offsetHeight + 'px'
+                    siteHeader.classList.add('is-fixed')
+                } else {
+                    document.body.style.paddingTop = 0
+                    siteHeader.classList.remove('is-fixed')
+                }
+                if (((window.innerHeight + window.pageYOffset) + 100) >= document.body.offsetHeight) {
+                    btnGoTop.classList.add('is-active')
+                } else {
+                    btnGoTop.classList.remove('is-active')
+                }
+                sections.forEach((section)=>{
+                    if(section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
+                        section.classList.add('in')
+                        //console.log(section.id)
+                        let btn = document.querySelector(`[href="#${section.id}"]`)
+                        if(btn) {
+                            btn.classList.add('is-active')
+                                let siblings = this.getSiblings(btn);
+                            siblings.map( (el) => {
+                                el.classList.remove('is-active')
+                            })
+                        }
+                    } else {
+                        section.classList.remove('in')
+                    }
+                })
             }
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                btnGoTop.classList.add('is-active')
-            } else {
-                btnGoTop.classList.remove('is-active')
+        ))
+    }
+    getSiblings = (el)=> {
+        let sibling = el.parentNode.firstChild;
+        let siblings = [];
+        while (sibling) {
+        //節點類型為元素節點 且 sibling不等於自己 就push到siblings
+            if (sibling.nodeType === 1 && sibling != el) {
+                siblings.push(sibling);
             }
-        })
+            //找siblings下一個同層元素
+            sibling = sibling.nextSibling;
+        }
+        //執行至無同層元素回傳至陣列
+        return siblings;
     }
     onClickGoTopFN = (event)=> {
         event.preventDefault()
         event.stopPropagation()
         let target = document.body
         ScrollPageTo(target,800)
+        event.target.classList.remove('is-active')
     }
     render() { 
         return (

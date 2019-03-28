@@ -3,7 +3,7 @@ import ReturnPolicyItem from './ReturnPolicyItem'
 import styled from 'styled-components'
 import Title from '../Title'
 
-const ReturnPolicyWrap = styled.div`
+const ReturnPolicyWrap = styled.section`
     padding: 80px 0;
 `
 const ReturnPolicyInner = styled.div`
@@ -47,7 +47,7 @@ class ReturnPolicy extends Component {
     }
     render() { 
         return (
-            <ReturnPolicyWrap id={this.props.idName}>
+            <ReturnPolicyWrap id={this.props.idName} data-block>
                 <Title title='退貨須知' desc='return policy'></Title>
                 <ReturnPolicyInner>
                     <ul>

@@ -3,7 +3,7 @@ import RemindItem from './RemindItem'
 import styled from 'styled-components'
 import Title from '../Title'
 
-const RemindWrap = styled.div`
+const RemindWrap = styled.section`
     padding: 80px 0;
 `
 const RemindInner = styled.div`
@@ -38,7 +38,7 @@ class Remind extends Component {
     }
     render() { 
         return (
-            <RemindWrap id={this.props.idName}>
+            <RemindWrap id={this.props.idName} data-block>
                 <Title title='注意事項' desc='remind'></Title>
                 <RemindInner>
                     <ul>

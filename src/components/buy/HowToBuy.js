@@ -72,7 +72,7 @@ class HowToBuy extends Component {
   }
   render() { 
     return (
-      <HowToBuyWrap id={this.props.idName}>
+      <HowToBuyWrap id={this.props.idName} data-block>
         <Title title="訂購方式" desc="how to buy"></Title>
         <HowToBuyInner>
           {

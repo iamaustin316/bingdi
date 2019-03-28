@@ -41,10 +41,10 @@ class Nav extends Component {
                     name: '付款方式',
                     url: '#payment'
                 },{
-                    name: '品牌故事 ',
+                    name: '品牌故事',
                     url: '#story'
                 },{
-                    name: '問與答 ',
+                    name: '問與答',
                     url: '#qa'
                 },{
                     name: '注意事項',
