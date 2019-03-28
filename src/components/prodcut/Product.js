@@ -7,7 +7,7 @@ import productImage2 from '../../images/product-2.png'
 import productImage3 from '../../images/product-3.png'
 import productImage4 from '../../images/product-4.png'
 
-const ProductWrap = styled.div`
+const ProductWrap = styled.section`
     padding: 80px 0;
 `
 

@@ -61,7 +61,15 @@ class App extends Component {
     }
     componentDidMount = ()=> {
         const btnGoTop = document.querySelector('#btn-top')
+        const siteHeader = document.querySelector('#siteHeader')
         window.addEventListener('scroll',(e)=>{
+            if(window.pageYOffset >= 1) {
+                document.body.style.paddingTop = siteHeader.offsetHeight + 'px'
+                siteHeader.classList.add('is-fixed')
+            } else {
+                document.body.style.paddingTop = 0
+                siteHeader.classList.remove('is-fixed')
+            }
             if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
                 btnGoTop.classList.add('is-active')
             } else {

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PaymentItem from './PaymentItem'
 import Title from '../Title'
 
-const PaymentWrap = styled.div`
+const PaymentWrap = styled.section`
     padding: 80px 0;
 `
 const PaymentInner = styled.div`

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import HowToBuyItem from './HowToBuyItem'
 import Title from '../Title'
 
-const HowToBuyWrap = styled.div`
+const HowToBuyWrap = styled.section`
     padding: 80px 0;
 `
 const HowToBuyInner = styled.div`

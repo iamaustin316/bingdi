@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from './Logo';
 import Nav from './Nav';
 import styled from 'styled-components';
+import BtnToggle from './BtnToggle'
 
 const SiteHeader = styled.div`
     width: 100%;
@@ -14,52 +15,10 @@ const SiteHeader = styled.div`
     position: relative;
     z-index: 4;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-`
-
-const BtnToggle = styled.button`
-    display: none;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: 16px;
-    top: 8px;
-    background-color: transparent;
-    border: 0;
     transition: all 500ms ease-in-out;
-    @media (max-width: 980px) {
-       display: block;
-    }
-    &::before {
-        content: "";
-        width: 24px;
-        height: 2px;
-        background-color: #666;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%,-200%,0) rotate(-0);
-        transform-origin: center;
-        transition: all 300ms ease-in-out;
-    }
-    &::after {
-        content: "";
-        width: 24px;
-        height: 2px;
-        background-color: #666;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%,100%,0);
-        transform-origin: center;
-        transition: all 300ms ease-in-out;
-    }
-    &.is-active {
-        &::before {
-            transform: translate3d(-50%,-50%,0);
-        }
-        &::after {
-            transform: translate3d(-50%,-50%,0);
-        }
+    &.is-fixed {
+        position: fixed;
+        top: 0;
     }
 `
 
@@ -73,8 +32,7 @@ class Header extends Component {
     }
     componentDidMount = ()=> {
         const siteNav = document.querySelector('#siteNav')
-        const btnToggle = document.querySelector('#btn-toggle')
-        
+        const btnToggle = document.querySelector('#btnToggle')
     }
     clickToggleFN = (e) => {
         if(!this.state.navShowCool) {
@@ -92,8 +50,6 @@ class Header extends Component {
         } 
     }
     hideNav = ()=> {
-        console.log(btnToggle)
-        console.log(siteNav)
         btnToggle.classList.remove('is-active')
         siteNav.classList.remove('is-active')
         this.setState( state => ({
@@ -102,10 +58,10 @@ class Header extends Component {
     }
     render() { 
         return (
-            <SiteHeader>
+            <SiteHeader id='siteHeader'>
                 <Logo name={this.state.logoName}></Logo>
                 <Nav hideNav={this.hideNav}></Nav>
-                <BtnToggle id="btn-toggle" onClick={this.clickToggleFN}></BtnToggle>
+                <BtnToggle click={this.clickToggleFN}></BtnToggle>
             </SiteHeader>
         );
     }

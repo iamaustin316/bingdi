@@ -7,9 +7,10 @@ const KvSection = styled.section`
     width: 100%;
     position: relative;
     z-index: 1;
+    box-shadow: 0 20px 56px rgba(0,0,0,0.9);
     img {
         max-width: 100%;
-        height: 0 auto;
+        height: auto;
         display: block;
         margin: 0;
     }

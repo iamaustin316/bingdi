@@ -38,7 +38,7 @@ class Footer extends Component {
                 },
                 {
                     icon: 'icon-phone',
-                    link: '02-55994585#100',
+                    link: 'tel:02-55994585#100',
                 }
             ]
         }

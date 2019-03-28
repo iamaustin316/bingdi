@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import QAItem from './QAItem';
 import Title from '../Title'
 
-const QAWrap = styled.div`
+const QAWrap = styled.section`
     padding: 80px 0;
 `
 const QAInner = styled.div`

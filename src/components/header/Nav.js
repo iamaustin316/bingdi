@@ -50,7 +50,7 @@ class Nav extends Component {
                     name: '注意事項',
                     url: '#remind'
                 },{
-                    name: '注意事項',
+                    name: '退貨須知',
                     url: '#return'
                 }
             ]
