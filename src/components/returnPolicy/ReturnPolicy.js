@@ -47,7 +47,7 @@ class ReturnPolicy extends Component {
     }
     render() { 
         return (
-            <ReturnPolicyWrap>
+            <ReturnPolicyWrap id={this.props.idName}>
                 <Title title='退貨須知' desc='return policy'></Title>
                 <ReturnPolicyInner>
                     <ul>

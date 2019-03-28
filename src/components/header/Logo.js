@@ -24,7 +24,7 @@ class Logo extends Component {
     render() { 
         return (
             <H1>
-                <img src={LogoImg} alt="冰帝咖啡"/>
+                <img src={LogoImg} alt={this.props.name}/>
             </H1>
         );
     }

@@ -38,7 +38,7 @@ class Remind extends Component {
     }
     render() { 
         return (
-            <RemindWrap>
+            <RemindWrap id={this.props.idName}>
                 <Title title='注意事項' desc='remind'></Title>
                 <RemindInner>
                     <ul>

@@ -5,18 +5,18 @@ import LazyLoad from 'react-lazyload'
 const ProductItem = styled.div`
     width: 25%;
     position: relative;
-    &::before {
-        content: "";
-        background: radial-gradient(ellipse at center, #6e534b 0%,#1b110e 70%);
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        border-radius: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%,-84%,0);
-        z-index: -1;
-    }
+    // &::before {
+    //     content: "";
+    //     background: radial-gradient(ellipse at center, rgba(110,83,75,0.6) 0%,rgba(110,83,75,0) 60%);
+    //     width: 200px;
+    //     height: 200px;
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate3d(-50%,-84%,0);
+    //     z-index: -1;
+    // }
     img {
         max-width: 80px;
         display: block;

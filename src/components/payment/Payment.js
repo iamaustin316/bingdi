@@ -36,7 +36,7 @@ class Payment extends Component {
     }
     render() { 
         return (
-            <PaymentWrap>
+            <PaymentWrap id={this.props.idName}>
                 <Title title="付款方式" desc="payment"></Title>
                 <PaymentInner>
                     {

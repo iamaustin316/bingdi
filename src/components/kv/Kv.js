@@ -32,6 +32,7 @@ const KvHeading = styled.div`
         font-weight: 500;
         color: #4b3b2f;
         letter-spacing: 10px;
+        text-indent: 10px;
         line-height: 1.6;
         margin: 0 0 16px;
         strong {

@@ -39,7 +39,7 @@ class Story extends Component {
   }
   render() { 
     return (
-      <StoryWrap>
+      <StoryWrap id={this.props.idName}>
         <Title title='品牌故事' desc='story'></Title>
         <StoryIamgeWall></StoryIamgeWall>
         <StoryInner>

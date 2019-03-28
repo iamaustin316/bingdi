@@ -44,7 +44,7 @@ class QA extends Component {
     }
     render() { 
         return (
-            <QAWrap>
+            <QAWrap id={this.props.idName}>
                 <Title title="問與答" desc="q&amp;a"></Title>
                 <QAInner>
                     {

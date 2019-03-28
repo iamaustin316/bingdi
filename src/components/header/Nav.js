@@ -4,16 +4,23 @@ import Btn from './Btn';
 
 const SiteNav = styled.nav`
     @media (max-width: 980px) {
-        width: 120px;
+        width: 108px;
         height: 100vh;
+        box-sizing: border-box;
+        padding-top: 64px;
         background-color: #fff;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
+        align-content: start;
         box-shadow: 0 0 24px rgba(0,0,0,0.15);
+        transform: translate3d(100%,0,0);
+        transition: all 500ms ease-in-out;
+        &.is-active {
+            transform: translate3d(0,0,0);
+        }
     }
 `
 
@@ -38,20 +45,23 @@ class Nav extends Component {
                     url: '#story'
                 },{
                     name: '問與答 ',
-                    url: '#qma'
+                    url: '#qa'
                 },{
                     name: '注意事項',
                     url: '#remind'
+                },{
+                    name: '注意事項',
+                    url: '#return'
                 }
             ]
         }
     }
     render() { 
         return (
-            <SiteNav>
+            <SiteNav id='siteNav'>
                 {
                     this.state.navName.map((el,index)=>{
-                        return <Btn key={index} name={el.name} url={el.url}></Btn>
+                        return <Btn key={index} name={el.name} url={el.url} hideNav={this.props.hideNav}></Btn>
                     })
                 }
             </SiteNav>
