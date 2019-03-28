@@ -12,8 +12,11 @@ const ALink = styled.a`
     &:hover {
         color: #333;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 980px) {
        padding: 0 8px;
+       display: block;
+       width: 100%;
+       text-align: center;
     }
 `
 

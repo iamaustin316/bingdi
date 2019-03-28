@@ -3,7 +3,18 @@ import styled from 'styled-components';
 import Btn from './Btn';
 
 const SiteNav = styled.nav`
-    
+    @media (max-width: 980px) {
+        width: 120px;
+        height: 100vh;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        box-shadow: 0 0 24px rgba(0,0,0,0.15);
+    }
 `
 
 class Nav extends Component {
