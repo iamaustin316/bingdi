@@ -81,6 +81,7 @@ class App extends Component {
                 sections.forEach((section)=>{
                     if(section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
                         section.classList.add('in')
+                        console.log(section.childNodes)
                         //console.log(section.id)
                         let btn = document.querySelector(`[href="#${section.id}"]`)
                         if(btn) {

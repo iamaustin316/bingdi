@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import RemindItem from './RemindItem'
 import styled from 'styled-components'
 import Title from '../Title'
+import { SectionBlock, SectionBlockInner } from '../SectionBlock'
 
 const RemindWrap = styled.section`
     padding: 80px 0;
@@ -38,7 +39,7 @@ class Remind extends Component {
     }
     render() { 
         return (
-            <RemindWrap id={this.props.idName} data-block>
+            <SectionBlock id={this.props.idName} data-block>
                 <Title title='注意事項' desc='remind'></Title>
                 <RemindInner>
                     <ul>
@@ -47,7 +48,7 @@ class Remind extends Component {
                         })}
                     </ul>
                 </RemindInner>
-            </RemindWrap>
+            </SectionBlock>
         )
     }
 }

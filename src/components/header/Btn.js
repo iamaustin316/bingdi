@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ScrollPageTo from '../ScrollPageTop'
 
 const ALink = styled.a`
-    font-size: 12px;
+    font-size: 14px;
     color: #4b3b2f;
     text-decoration: none;
     margin: 0 16px;

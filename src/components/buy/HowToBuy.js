@@ -2,20 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import HowToBuyItem from './HowToBuyItem'
 import Title from '../Title'
-
-const HowToBuyWrap = styled.section`
-    padding: 80px 0;
-`
-const HowToBuyInner = styled.div`
-    width: 960px;
-    margin: 0 auto;
-    display: flex;
-    @media (max-width: 980px) {
-        width: auto;
-        padding: 0 16px;
-        flex-wrap: wrap;
-    }
-`
+import { SectionBlock, SectionBlockInnerFlex } from '../SectionBlock'
 
 class HowToBuy extends Component {
   constructor(props) {
@@ -72,16 +59,16 @@ class HowToBuy extends Component {
   }
   render() { 
     return (
-      <HowToBuyWrap id={this.props.idName} data-block>
+      <SectionBlock id={this.props.idName} data-block>
         <Title title="訂購方式" desc="how to buy"></Title>
-        <HowToBuyInner>
+        <SectionBlockInnerFlex>
           {
             this.state.buyTypes.map((el,index)=>{
               return <HowToBuyItem key={index} iconName={el.icon} name={el.name} remind={el.remind} type={el.type}></HowToBuyItem>
             })
           }
-        </HowToBuyInner>
-      </HowToBuyWrap>
+        </SectionBlockInnerFlex>
+      </SectionBlock>
     );
   }
 }

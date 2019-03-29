@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PaymentItem from './PaymentItem'
 import Title from '../Title'
+import { SectionBlock, SectionBlockInner } from '../SectionBlock'
 
 const PaymentWrap = styled.section`
     padding: 80px 0;
@@ -36,16 +37,16 @@ class Payment extends Component {
     }
     render() { 
         return (
-            <PaymentWrap id={this.props.idName} data-block>
+            <SectionBlock id={this.props.idName} data-block>
                 <Title title="付款方式" desc="payment"></Title>
-                <PaymentInner>
+                <SectionBlockInner>
                     {
                         this.state.payments.map((el,index)=>{
                             return <PaymentItem key={index} title={el.title} desc={el.desc}></PaymentItem>
                         })
                     }
-                </PaymentInner>
-            </PaymentWrap>
+                </SectionBlockInner>
+            </SectionBlock>
         );
     }
 }

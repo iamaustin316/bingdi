@@ -6,21 +6,7 @@ import productImage1 from '../../images/product-1.png'
 import productImage2 from '../../images/product-2.png'
 import productImage3 from '../../images/product-3.png'
 import productImage4 from '../../images/product-4.png'
-
-const ProductWrap = styled.section`
-    padding: 80px 0;
-`
-
-const ProductInner = styled.div`
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    @media (max-width: 800px) {
-        flex-wrap: wrap;
-        width: auto;
-        padding: 0 16px;
-    }
-`
+import { SectionBlock, SectionBlockInnerFlex } from '../SectionBlock'
 
 class Index extends Component {
     constructor(props) {
@@ -61,16 +47,16 @@ class Index extends Component {
     }
     render() { 
         return (
-            <ProductWrap id={this.props.idName} data-block>
+            <SectionBlock id={this.props.idName} data-block>
                 <Title title="產品介紹" desc="product"></Title>
-                <ProductInner>
+                <SectionBlockInner>
                 {
                     this.state.products.map((el,index)=>{
                         return <ProductItems key={index} imageUrl={el.imageUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
                     })
                 }
-                </ProductInner>
-            </ProductWrap>
+                </SectionBlockInner>
+            </SectionBlock>
         );
     }
 }

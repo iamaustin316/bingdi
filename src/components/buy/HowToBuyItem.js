@@ -42,14 +42,15 @@ const Icons = styled.div`
   }
 `
 const Remind = styled.li`
-  font-size: 12px;
+  font-size: 14px;
   color: #d4c7bf;
   line-height: 1.6;
-  padding-left: 32px;
+  padding-left: 40px;
   position: relative;
   border-top: solid 1px #41342c;
   padding-top: 16px;
   margin-bottom: 16px;
+  letter-spacing: 1px;
   &:last-child {
     border-bottom: 0;
   }

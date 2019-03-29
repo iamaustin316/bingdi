@@ -25,6 +25,10 @@ const StoryItems = styled.div`
     margin: 0;
     text-align: left;
     letter-spacing: 1px;
+    br {
+      display: block;
+      line-height: 48px;
+    }
   }
 `
 
@@ -37,7 +41,7 @@ class StoryItem extends Component {
     return (
       <StoryItems>
         <h3>{this.props.title}</h3>
-        <p>{this.props.desc}</p>
+        <p dangerouslySetInnerHTML={{ __html: this.props.desc}}></p>
       </StoryItems>
     );
   }

@@ -2,18 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import QAItem from './QAItem';
 import Title from '../Title'
-
-const QAWrap = styled.section`
-    padding: 80px 0;
-`
-const QAInner = styled.div`
-    width: 960px;
-    margin: 0 auto;
-    @media (max-width: 980px) {
-        width: auto;
-        padding: 0 16px;
-    }
-`
+import { SectionBlock, SectionBlockInner } from '../SectionBlock'
 
 class QA extends Component {
     constructor(props) {
@@ -44,16 +33,16 @@ class QA extends Component {
     }
     render() { 
         return (
-            <QAWrap id={this.props.idName} data-block>
+            <SectionBlock id={this.props.idName} data-block>
                 <Title title="問與答" desc="q&amp;a"></Title>
-                <QAInner>
+                <SectionBlockInner>
                     {
                         this.state.qaItems.map((el,index)=>{
                             return <QAItem key={index} question={el.question} answer={el.answer}></QAItem>
                         })
                     }
-                </QAInner>
-            </QAWrap>
+                </SectionBlockInner>
+            </SectionBlock>
         );
     }
 }
