@@ -6,6 +6,10 @@ import productImage1 from '../../images/product-1.png'
 import productImage2 from '../../images/product-2.png'
 import productImage3 from '../../images/product-3.png'
 import productImage4 from '../../images/product-4.png'
+import productImageIll1 from '../../images/product-1-ill.png'
+import productImageIll2 from '../../images/product-2-ill.png'
+import productImageIll3 from '../../images/product-3-ill.png'
+import productImageIll4 from '../../images/product-4-ill.png'
 import { SectionBlock, SectionBlockInnerFlex } from '../SectionBlock'
 
 class Index extends Component {
@@ -15,6 +19,7 @@ class Index extends Component {
             products: [
                 {
                     imageUrl: productImage1,
+                    imgaeIllUrl: productImageIll1,
                     name: '經典冰滴',
                     desc: '肯亞特選豆',
                     ml: '300',
@@ -22,6 +27,7 @@ class Index extends Component {
                     salePrice: '150'
                 },{
                     imageUrl: productImage2,
+                    imgaeIllUrl: productImageIll2,
                     name: '冰滴拿鐵',
                     desc: '肯亞特選豆',
                     ml: '300',
@@ -29,6 +35,7 @@ class Index extends Component {
                     salePrice: '150'
                 },{
                     imageUrl: productImage3,
+                    imgaeIllUrl: productImageIll3,
                     name: '冰滴蜜咖啡',
                     desc: '肯亞特選豆',
                     ml: '300',
@@ -36,6 +43,7 @@ class Index extends Component {
                     salePrice: '150'
                 },{
                     imageUrl: productImage4,
+                    imgaeIllUrl: productImageIll4,
                     name: '果戀冰滴',
                     desc: '肯亞特選豆',
                     ml: '300',
@@ -49,13 +57,13 @@ class Index extends Component {
         return (
             <SectionBlock id={this.props.idName} data-block>
                 <Title title="產品介紹" desc="product"></Title>
-                <SectionBlockInner>
+                <SectionBlockInnerFlex>
                 {
                     this.state.products.map((el,index)=>{
-                        return <ProductItems key={index} imageUrl={el.imageUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
+                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
                     })
                 }
-                </SectionBlockInner>
+                </SectionBlockInnerFlex>
             </SectionBlock>
         );
     }

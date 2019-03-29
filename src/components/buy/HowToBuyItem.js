@@ -18,10 +18,9 @@ const HowToBuyItem = styled.div`
     margin: 0;
   }
   @media (max-width: 980px) {
-    width: 50%;
+    width: 100%;
     margin-bottom: 32px;
-    &:nth-child(3),
-    &:nth-child(4) {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -39,6 +38,13 @@ const Icons = styled.div`
     font-size: 108px;
     color: #231913;
     text-align: center;
+  }
+  @media (max-width: 959px) {
+    width: 96px;
+    height: 96px;
+    i {
+      font-size: 80px;
+    }
   }
 `
 const Remind = styled.li`

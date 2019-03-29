@@ -2,25 +2,8 @@ import React, { Component } from 'react'
 import RemindItem from './RemindItem'
 import styled from 'styled-components'
 import Title from '../Title'
-import { SectionBlock, SectionBlockInner } from '../SectionBlock'
+import { SectionBlock, SectionBlockInner, ReturnUl } from '../SectionBlock'
 
-const RemindWrap = styled.section`
-    padding: 80px 0;
-`
-const RemindInner = styled.div`
-    width: 960px;
-    margin: 0 auto;
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        counter-reset: list;
-    }
-    @media (max-width: 980px) {
-        width: auto;
-        padding: 0 16px;
-    }
-`
 class Remind extends Component {
     constructor(props) {
         super(props);
@@ -41,13 +24,13 @@ class Remind extends Component {
         return (
             <SectionBlock id={this.props.idName} data-block>
                 <Title title='注意事項' desc='remind'></Title>
-                <RemindInner>
-                    <ul>
+                <SectionBlockInner>
+                    <ReturnUl>
                         {this.state.rule.map( (el, index) => {
                             return <RemindItem key={index} rule={el}></RemindItem>
                         })}
-                    </ul>
-                </RemindInner>
+                    </ReturnUl>
+                </SectionBlockInner>
             </SectionBlock>
         )
     }

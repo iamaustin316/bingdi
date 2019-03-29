@@ -81,11 +81,11 @@ class Kv extends Component {
             <KvSection>
                 <KvHeading>
                     <h2>回甘的咖啡<strong>要用時間來等待</strong></h2>
-                    <button onClick={this.clickBuyFN} type="button">馬上體驗</button>
+                    <button onClick={this.clickBuyFN} type="button">立即體驗</button>
                 </KvHeading>
                 <picture>
-                    <source srcSet={kvImgM} media="(max-width: 50em) and (orientation: portrait)" />
-                    <img src={kvImg} alt="My default image" />
+                    <source srcSet={kvImgM} media="(max-width: 59em) and (orientation: portrait)" />
+                    <img src={kvImg} alt="冰帝咖啡" />
                 </picture>
             </KvSection>
         );

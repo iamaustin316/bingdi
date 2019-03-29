@@ -2,24 +2,8 @@ import React, { Component } from 'react'
 import ReturnPolicyItem from './ReturnPolicyItem'
 import styled from 'styled-components'
 import Title from '../Title'
+import { SectionBlock, SectionBlockInner, ReturnUl } from '../SectionBlock'
 
-const ReturnPolicyWrap = styled.section`
-    padding: 80px 0;
-`
-const ReturnPolicyInner = styled.div`
-    width: 960px;
-    margin: 0 auto;
-    & > ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        counter-reset: list;
-    }
-    @media (max-width: 980px) {
-        width: auto;
-        padding: 0 16px;
-    }
-`
 
 class ReturnPolicy extends Component {
     constructor(props) {
@@ -47,18 +31,18 @@ class ReturnPolicy extends Component {
     }
     render() { 
         return (
-            <ReturnPolicyWrap id={this.props.idName} data-block>
+            <SectionBlock id={this.props.idName} data-block>
                 <Title title='退貨須知' desc='return policy'></Title>
-                <ReturnPolicyInner>
-                    <ul>
+                <SectionBlockInner>
+                    <ReturnUl>
                     {
                         this.state.policy.map((el, index) => {
                             return <ReturnPolicyItem key={index} text={el.text} detail={el.detail}></ReturnPolicyItem>
                         })
                     }
-                    </ul>
-                </ReturnPolicyInner>
-            </ReturnPolicyWrap>
+                    </ReturnUl>
+                </SectionBlockInner>
+            </SectionBlock>
         );
     }
 }

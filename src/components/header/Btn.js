@@ -17,11 +17,11 @@ const ALink = styled.a`
         border-bottom-color: #29190d;
     }
     @media (max-width: 980px) {
-        margin: 0 8px;
+        width: 64px;
+        margin: 0 auto 16px;
         display: block;
-        width: 100%;
         text-align: center;
-        line-height: 40px;
+        line-height: 20px;
     }
     &.is-active {
         border-bottom-color: #29190d;
