@@ -58,15 +58,15 @@ const BtnTop = styled.button`
 
 class App extends Component {
     state = {
-        
+
     }
-    componentDidMount = ()=> {
+    componentDidMount = () => {
         const btnGoTop = document.querySelector('#btn-top')
         const siteHeader = document.querySelector('#siteHeader')
         const sections = document.querySelectorAll('section')
-        window.addEventListener('scroll',_.debounce(
-            (e)=>{ 
-                if(window.pageYOffset >= 1) {
+        window.addEventListener('scroll', _.debounce(
+            (e) => {
+                if (window.pageYOffset >= 1) {
                     document.body.style.paddingTop = siteHeader.offsetHeight + 'px'
                     siteHeader.classList.add('is-fixed')
                 } else {
@@ -78,16 +78,13 @@ class App extends Component {
                 } else {
                     btnGoTop.classList.remove('is-active')
                 }
-                sections.forEach((section)=>{
-                    if(section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
-                        section.classList.add('in')
-                        console.log(section.childNodes)
-                        //console.log(section.id)
+                sections.forEach((section) => {
+                    if (section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
                         let btn = document.querySelector(`[href="#${section.id}"]`)
-                        if(btn) {
+                        if (btn) {
                             btn.classList.add('is-active')
-                                let siblings = this.getSiblings(btn);
-                            siblings.map( (el) => {
+                            let siblings = this.getSiblings(btn);
+                            siblings.map((el) => {
                                 el.classList.remove('is-active')
                             })
                         }
@@ -98,11 +95,11 @@ class App extends Component {
             }
         ))
     }
-    getSiblings = (el)=> {
+    getSiblings = (el) => {
         let sibling = el.parentNode.firstChild;
         let siblings = [];
         while (sibling) {
-        //節點類型為元素節點 且 sibling不等於自己 就push到siblings
+            //節點類型為元素節點 且 sibling不等於自己 就push到siblings
             if (sibling.nodeType === 1 && sibling != el) {
                 siblings.push(sibling);
             }
@@ -112,25 +109,27 @@ class App extends Component {
         //執行至無同層元素回傳至陣列
         return siblings;
     }
-    onClickGoTopFN = (event)=> {
+    onClickGoTopFN = (event) => {
         event.preventDefault()
         event.stopPropagation()
         let target = document.body
-        ScrollPageTo(target,800)
+        ScrollPageTo(target, 800)
         event.target.classList.remove('is-active')
     }
-    render() { 
+    render() {
         return (
             <div className='wrap'>
                 <Header></Header>
-                <Kv></Kv>
-                <Product idName='product'></Product>
-                <HowToBuy idName='howtobuy'></HowToBuy>
-                <Payment idName='payment'></Payment>
-                <Story idName='story'></Story>
-                <QA idName='qa'></QA>
-                <Remind idName='remind'></Remind>
-                <ReturnPolicy idName='return'></ReturnPolicy>
+                <main>
+                    <Kv></Kv>
+                    <Product idName='product'></Product>
+                    <HowToBuy idName='howtobuy'></HowToBuy>
+                    <Payment idName='payment'></Payment>
+                    <Story idName='story'></Story>
+                    <QA idName='qa'></QA>
+                    <Remind idName='remind'></Remind>
+                    <ReturnPolicy idName='return' className='no-border'></ReturnPolicy>
+                </main>
                 <Footer></Footer>
                 <BtnTop id="btn-top" onClick={this.onClickGoTopFN}></BtnTop>
             </div>
@@ -138,4 +137,4 @@ class App extends Component {
     }
 }
 
-ReactDOM.render( <App></App>, document.querySelector('#app'))
+ReactDOM.render(<App></App>, document.querySelector('#app'))

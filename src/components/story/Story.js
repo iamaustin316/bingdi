@@ -28,7 +28,7 @@ class Story extends Component {
   render() { 
     return (
       <SectionBlock id={this.props.idName}>
-        <Title title='品牌故事' desc='story'></Title>
+        <Title title='Logo故事' desc='story'></Title>
         <StoryIamgeWall></StoryIamgeWall>
         <SectionBlockInner>
           {this.state.story.map((el, index) => {

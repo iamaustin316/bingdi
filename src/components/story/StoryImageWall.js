@@ -4,6 +4,8 @@ import StoryImg2 from '../../images/story-img-2@3x.jpg'
 import StoryImg3 from '../../images/story-img-3@3x.jpg'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
+import { forceCheck } from 'react-lazyload';
+import FadeIn from "react-lazyload-fadein";
 
 const GridWarp = styled.div`
   display: grid;
@@ -11,6 +13,7 @@ const GridWarp = styled.div`
   grid-row-gap: 0;
   grid-template-areas: "top rightTop""top rightBottom";
   margin-bottom: 56px;
+  line-height: 0;
   div {
     &:nth-child(1) {
       grid-area: top;
@@ -36,23 +39,42 @@ class StoryImagesWall extends Component {
     super(props);
     this.state = {  }
   }
+  componentDidMount = () => {
+    forceCheck();
+  }
   render() { 
     return (
       <GridWarp>
         <div>
-          <LazyLoad>
-            <img src={StoryImg1} alt=""/>
-          </LazyLoad>
+          <FadeIn duration={800} easing={'ease-out'}>
+            {/* <img src={StoryImg1} alt=""/> */}
+            {onload => (
+                <img
+                    src={StoryImg1}
+                    onLoad={onload}
+                />
+            )}
+          </FadeIn>
         </div>
         <div>
-          <LazyLoad>
-            <img src={StoryImg2} alt=""/>
-          </LazyLoad>
+          <FadeIn duration={800} easing={'ease-out'}>
+            {onload => (
+                <img
+                    src={StoryImg2}
+                    onLoad={onload}
+                />
+            )}
+          </FadeIn>
         </div>
         <div>
-          <LazyLoad>
-            <img src={StoryImg3} alt=""/>
-          </LazyLoad>
+          <FadeIn duration={800} easing={'ease-out'}>
+            {onload => (
+                <img
+                    src={StoryImg3}
+                    onLoad={onload}
+                />
+            )}
+          </FadeIn>
         </div>
         {/* <img src={StoryImg1} alt=""/>
         <img src={StoryImg2} alt=""/>

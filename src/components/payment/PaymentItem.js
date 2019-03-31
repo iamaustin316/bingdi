@@ -23,7 +23,7 @@ const PaymentItems = styled.div`
     line-height: 1.8;
     color: #d4c7bf;
     margin: 0;
-    text-align: left;
+    text-align: center;
     letter-spacing: 1px;
   }
 `
@@ -37,7 +37,7 @@ class PaymentItem extends Component {
         return (
             <PaymentItems>
                 <h3>{this.props.title}</h3>
-                <p>{this.props.desc}</p>
+                <p dangerouslySetInnerHTML={{ __html: this.props.desc}}></p>
             </PaymentItems>
         );
     }

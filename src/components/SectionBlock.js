@@ -1,10 +1,27 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import SectionBorderImg from '../images/section-border@4x.png'
 
 const SectionBlock = styled.section`
-    padding: 80px 0;
+    padding: 88px 0 108px 0;
+    position: relative;
+    &::after {
+        content: "";
+        width: 100%;
+        background: transparent url(../${SectionBorderImg}) no-repeat center top;
+        position: absolute;
+        background-size: auto 100%;
+        left: 0;
+        bottom: 0;
+        height: 20px;
+    }
     @media (max-width: 980px) {
-        padding: 48px 0;
+        padding: 56px 0 80px 0;
+    }
+    &:last-child {
+        &::after {
+            display: none;
+        }
     }
 `
 const SectionBlockInner = styled.div`

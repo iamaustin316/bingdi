@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700|Montserrat:400,700');
+
 @font-face {
   font-family: 'bingdi';
   src:
@@ -9,7 +10,8 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'bingdi' !important;
   speak: none;
@@ -27,33 +29,41 @@
 .icon-ig:before {
   content: "\e900";
 }
+
 .icon-mail:before {
   content: "\e901";
 }
+
 .icon-phone:before {
   content: "\e902";
 }
+
 .icon-line:before {
   content: "\e903";
 }
+
 .icon-fb:before {
   content: "\e904";
 }
+
 .icon-event:before {
   content: "\e905";
 }
+
 .icon-cash:before {
   content: "\e906";
 }
+
 .icon-preorder:before {
   content: "\e907";
 }
+
 .icon-retail:before {
   content: "\e908";
 }
 
 html {
-  font-family: 'Montserrat','Noto Sans TC',PingFangTC-Medium,"微軟正黑體","Microsoft JhengHei","Arial Unicode MS";
+  font-family: 'Montserrat', 'Noto Sans TC', PingFangTC-Medium, "微軟正黑體", "Microsoft JhengHei", "Arial Unicode MS";
   /* height: 100%; */
 }
 
@@ -63,4 +73,3 @@ body {
   /* height: 100%; */
   position: relative;
 }
-

@@ -30,7 +30,7 @@ class Nav extends Component {
         this.state = {
             navName: [
                 {
-                    name: '商品介紹',
+                    name: '產品介紹',
                     url: '#product'
                 },
                 {

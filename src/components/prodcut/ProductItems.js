@@ -6,6 +6,7 @@ const ProductItem = styled.div`
     width: 25%;
     position: relative;
     & > img {
+        display: none;
         width: 96px;
         position: absolute;
         left: 50%;
@@ -96,10 +97,10 @@ class ProductItems extends Component {
                     <LazyLoad><img src={this.props.imageUrl} alt={this.props.name}/></LazyLoad>
                 </ProductImg>
                 <h2>{this.props.name}</h2>
-                <p><span>{this.props.desc}</span><span>{this.props.ml}ml</span></p>
+                <p><span>{this.props.ml}ml</span></p>
                 <PriceItem>
-                    <span>${this.props.oriPrice}</span>
-                    <span><small>$</small>{this.props.salePrice}</span>
+                    <span><small>原價：$</small>{this.props.oriPrice}</span>
+                    <span><small>特價：$</small>{this.props.salePrice}</span>
                 </PriceItem>
             </ProductItem>
         );
