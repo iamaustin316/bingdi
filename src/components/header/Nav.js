@@ -32,17 +32,18 @@ class Nav extends Component {
                 {
                     name: '產品介紹',
                     url: '#product'
-                },
-                {
+                },{
                     name: '訂購方式',
                     url: '#howtobuy'
-                }
-                ,{
+                },{
                     name: '付款方式',
                     url: '#payment'
                 },{
                     name: '品牌故事',
                     url: '#story'
+                },{
+                    name: '製作流程',
+                    url: '#flow'
                 },{
                     name: '問與答',
                     url: '#qa'

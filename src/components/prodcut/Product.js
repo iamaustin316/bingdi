@@ -21,6 +21,7 @@ class Index extends Component {
                     imageUrl: productImage1,
                     imgaeIllUrl: productImageIll1,
                     name: '經典冰滴',
+                    nameEN: 'Classic Iced Drip Coffee',
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
@@ -29,6 +30,7 @@ class Index extends Component {
                     imageUrl: productImage2,
                     imgaeIllUrl: productImageIll2,
                     name: '冰滴拿鐵',
+                    nameEN: 'Iced Drip Latte',
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
@@ -37,6 +39,7 @@ class Index extends Component {
                     imageUrl: productImage3,
                     imgaeIllUrl: productImageIll3,
                     name: '冰滴蜜咖啡',
+                    nameEN: 'Iced Drip Coffee with Honey',
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
@@ -45,6 +48,7 @@ class Index extends Component {
                     imageUrl: productImage4,
                     imgaeIllUrl: productImageIll4,
                     name: '果戀冰滴',
+                    nameEN: 'Iced Drip Coffee with Fruit',
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '180',
@@ -60,7 +64,7 @@ class Index extends Component {
                 <SectionBlockInnerFlex>
                 {
                     this.state.products.map((el,index)=>{
-                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
+                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} nameEN={el.nameEN} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
                     })
                 }
                 </SectionBlockInnerFlex>

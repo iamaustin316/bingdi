@@ -7,6 +7,7 @@ import QA from './components/qa/QA'
 import HowToBuy from './components/buy/HowToBuy'
 import Payment from './components/payment/Payment'
 import Story from './components/story/Story'
+import ProcessFlow from './components/ProcessFlow/ProcessFlow'
 import Remind from './components/remind/Remind'
 import ReturnPolicy from './components/returnPolicy/ReturnPolicy'
 import Footer from './components/footer/Footer'
@@ -126,6 +127,7 @@ class App extends Component {
                     <HowToBuy idName='howtobuy'></HowToBuy>
                     <Payment idName='payment'></Payment>
                     <Story idName='story'></Story>
+                    <ProcessFlow idName='flow'></ProcessFlow>
                     <QA idName='qa'></QA>
                     <Remind idName='remind'></Remind>
                     <ReturnPolicy idName='return' className='no-border'></ReturnPolicy>

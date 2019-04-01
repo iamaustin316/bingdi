@@ -8,7 +8,7 @@ const SectionBlock = styled.section`
     &::after {
         content: "";
         width: 100%;
-        background: transparent url(../${SectionBorderImg}) no-repeat center top;
+        background: transparent url(${SectionBorderImg}) no-repeat center top;
         position: absolute;
         background-size: auto 100%;
         left: 0;
@@ -25,10 +25,11 @@ const SectionBlock = styled.section`
     }
 `
 const SectionBlockInner = styled.div`
-    width: 1280px;
+    width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
     @media (max-width: 1279px) {
-        width: 960px;
+        width: 944px;
         padding: 0 16px;
         flex-wrap: wrap;
     }
@@ -40,18 +41,18 @@ const SectionBlockInner = styled.div`
 `
 
 const SectionBlockInnerFlex = styled.div`
-    width: 1280px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
     @media (max-width: 1279px) {
-        width: 960px;
+        width: 944px;
         padding: 0 16px;
-        flex-wrap: wrap;
     }
     @media (max-width: 959px) {
         width: auto;
         padding: 0 16px;
-        flex-wrap: wrap;
     }
 `
 

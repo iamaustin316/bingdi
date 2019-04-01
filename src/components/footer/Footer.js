@@ -53,7 +53,7 @@ class Footer extends Component {
                         })
                     }
                 </div>
-                <p>Copyright © 2019 C.M BINGDI 版權所有</p>
+                <p>Copyright © 2019 奇旻有限公司 版權所有</p>
             </Footers>
         );
     }

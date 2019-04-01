@@ -68,8 +68,14 @@ html {
 }
 
 body {
-  background: #2d221f url(../images/dark-wood.png) repeat 0 0;
-  background-size: 128px 128px;
+  background: #2d221f url(../images/dark_wood_@2X.jpg) repeat 0 0 fixed;
+  background-size: 512px 512px;
   /* height: 100%; */
   position: relative;
+}
+
+@media (max-width: 980px) {
+  body {
+    background-size: 256px 256px;
+  }
 }

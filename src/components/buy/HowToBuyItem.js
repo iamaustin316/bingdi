@@ -72,7 +72,6 @@ const TypeTitle = styled.strong`
 class HowToBuyItems extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
   }
   render() { 
     return (
@@ -84,7 +83,10 @@ class HowToBuyItems extends Component {
         <ul>
           {
             this.props.remind.map((el,index)=>{
-              return <Remind key={index}><TypeTitle>{this.props.type[index]}</TypeTitle>{el}</Remind>
+              return <Remind key={index}>
+                      <TypeTitle>{this.props.type[index]}</TypeTitle>
+                        <span dangerouslySetInnerHTML={{ __html: el}}></span>
+                      </Remind>
             })
           }
         </ul>

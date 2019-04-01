@@ -18,8 +18,17 @@ const ProductItem = styled.div`
         font-size: 20px;
         color: #fff;
         text-align: center;
-        margin: 0 0 8px;
+        margin: 0;
         padding: 0;
+        line-height: 1.6;
+    }
+    h3 {
+        font-size: 12px;
+        color: #fff;
+        margin: 0 0 8px;
+        line-height: 1.6;
+        text-align: center;
+        font-weight: 500;
     }
     p {
         font-size: 12px;
@@ -97,10 +106,11 @@ class ProductItems extends Component {
                     <LazyLoad><img src={this.props.imageUrl} alt={this.props.name}/></LazyLoad>
                 </ProductImg>
                 <h2>{this.props.name}</h2>
+                <h3>{this.props.nameEN}</h3>
                 <p><span>{this.props.ml}ml</span></p>
                 <PriceItem>
                     <span><small>原價：$</small>{this.props.oriPrice}</span>
-                    <span><small>特價：$</small>{this.props.salePrice}</span>
+                    <span><small>促銷價：$</small>{this.props.salePrice}</span>
                 </PriceItem>
             </ProductItem>
         );
