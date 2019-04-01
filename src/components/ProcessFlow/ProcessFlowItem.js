@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload'
+import { forceCheck } from 'react-lazyload';
+import FadeIn from "react-lazyload-fadein";
 
 const ProcessFlowItems = styled.div`
     position: relative;
@@ -65,7 +68,16 @@ class ProcessFlowItem extends Component {
         return (
             <ProcessFlowItems>
                 <p>{this.props.desc}</p>
-                <img src={this.props.stepImg} alt={this.props.desc}/>
+                <FadeIn duration={800} easing={'ease-out'}>
+                    {onload => (
+                        <img
+                            src={this.props.stepImg}
+                            onLoad={onload}
+                            alt={this.props.desc}
+                        />
+                    )}
+                </FadeIn>
+                {/* <img src={this.props.stepImg} alt={this.props.desc}/> */}
             </ProcessFlowItems>
         );
     }
