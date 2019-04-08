@@ -8,6 +8,7 @@ const ProcessFlowItems = styled.div`
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: #000;
     img {
         display: block;
         max-width: 100%;
@@ -62,11 +63,13 @@ const ProcessFlowItems = styled.div`
 class ProcessFlowItem extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {
+            
+        }
     }
     render() { 
         return (
-            <ProcessFlowItems>
+            <ProcessFlowItems onClick={this.props.onClickFN}>
                 <p>{this.props.desc}</p>
                 <FadeIn duration={800} easing={'ease-out'}>
                     {onload => (

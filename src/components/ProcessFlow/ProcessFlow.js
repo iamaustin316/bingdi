@@ -119,7 +119,7 @@ class ProcessFlow extends Component {
                     <GridWrap>
                         {
                             this.state.flowStep.map((el,index)=>{
-                                return <ProcessFlowItem key={index} stepImg={el.stepImg} desc={el.desc}></ProcessFlowItem>
+                                return <ProcessFlowItem onClickFN={this.props.clickShow} key={index} stepImg={el.stepImg} desc={el.desc}></ProcessFlowItem>
                             })
                         }
                     </GridWrap>

@@ -10,12 +10,16 @@ import Story from './components/story/Story'
 import ProcessFlow from './components/ProcessFlow/ProcessFlow'
 import Remind from './components/remind/Remind'
 import ReturnPolicy from './components/returnPolicy/ReturnPolicy'
+import Terms from './components/terms/Terms'
+import Disclaimer from './components/disclaimer/Disclaimer'
 import Footer from './components/footer/Footer'
 import Normalize from 'normalize.css'
 import baseCss from './css/App.css'
 import styled from 'styled-components';
 import ScrollPageTo from './components/ScrollPageTop'
 import _ from 'lodash'
+import Popup from './components/Popup'
+import StepImg1 from './images/flow-step-01.jpg'
 
 const BtnTop = styled.button`
     z-index: 100;
@@ -59,7 +63,8 @@ const BtnTop = styled.button`
 
 class App extends Component {
     state = {
-
+        showPopup: false,
+        popupImage: StepImg1
     }
     componentDidMount = () => {
         const btnGoTop = document.querySelector('#btn-top')
@@ -100,22 +105,31 @@ class App extends Component {
         let sibling = el.parentNode.firstChild;
         let siblings = [];
         while (sibling) {
-            //節點類型為元素節點 且 sibling不等於自己 就push到siblings
             if (sibling.nodeType === 1 && sibling != el) {
                 siblings.push(sibling);
             }
-            //找siblings下一個同層元素
             sibling = sibling.nextSibling;
         }
-        //執行至無同層元素回傳至陣列
         return siblings;
     }
     onClickGoTopFN = (event) => {
         event.preventDefault()
         event.stopPropagation()
         let target = document.body
-        ScrollPageTo(target, 800)
+        ScrollPageTo(target, 1600)
         event.target.classList.remove('is-active')
+    }
+    openPopupFN = (event) => {
+        console.log(event.target)
+        this.setState({
+            showPopup: !this.state.showPopup,
+            popupImage: event.target.src
+        });
+    }
+    openCloseFN = () => {
+        this.setState({
+            showPopup: !this.state.showPopup
+        });
     }
     render() {
         return (
@@ -127,12 +141,15 @@ class App extends Component {
                     <HowToBuy idName='howtobuy'></HowToBuy>
                     <Payment idName='payment'></Payment>
                     <Story idName='story'></Story>
-                    <ProcessFlow idName='flow'></ProcessFlow>
+                    <ProcessFlow idName='flow' clickShow={this.openPopupFN}></ProcessFlow>
                     <QA idName='qa'></QA>
                     <Remind idName='remind'></Remind>
-                    <ReturnPolicy idName='return' className='no-border'></ReturnPolicy>
+                    <ReturnPolicy idName='return'></ReturnPolicy>
+                    <Terms idName='terms'></Terms>
+                    <Disclaimer idName='disclaimer'></Disclaimer>
                 </main>
                 <Footer></Footer>
+                <Popup show={this.state.showPopup} closeFN={this.openCloseFN} imageName={this.state.popupImage}></Popup>
                 <BtnTop id="btn-top" onClick={this.onClickGoTopFN}></BtnTop>
             </div>
         );

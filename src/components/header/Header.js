@@ -13,7 +13,7 @@ const SiteHeader = styled.div`
     padding: 0 16px;
     box-sizing: border-box;
     position: relative;
-    z-index: 4;
+    z-index: 20;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: all 500ms ease-in-out;
     &.is-fixed {
