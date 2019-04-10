@@ -9,24 +9,17 @@ const ProcessFlowItems = styled.div`
     box-sizing: border-box;
     overflow: hidden;
     background-color: #000;
+    transition: all 500ms ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
     img {
         display: block;
         max-width: 100%;
-        marign: 0;
-        transition: all 500ms ease-in-out;
+        margin: 0;
         z-index: 5;
-    }
-    &:not(:hover) {
-        img {
-            filter: grayscale(100%);
-        }
-    }
-    @media (max-width: 959px) {
-        &:not(:hover) {
-        img {
-                filter: grayscale(0);
-            }
-        }
+        transition: all 500ms ease-in-out;
     }
     &::after {
         counter-increment: items;
@@ -69,11 +62,13 @@ class ProcessFlowItem extends Component {
     }
     render() { 
         return (
-            <ProcessFlowItems onClick={this.props.onClickFN}>
+            <ProcessFlowItems>
                 <p>{this.props.desc}</p>
-                <FadeIn duration={800} easing={'ease-out'}>
+                <FadeIn duration={300} easing={'ease-out'}>
                     {onload => (
                         <img
+                            onClick={this.props.onClickFN}
+                            data-index={this.props.imgIndex}
                             src={this.props.stepImg}
                             onLoad={onload}
                             alt={this.props.desc}

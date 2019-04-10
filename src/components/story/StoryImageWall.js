@@ -46,7 +46,7 @@ class StoryImagesWall extends Component {
     return (
       <GridWarp>
         <div>
-          <FadeIn duration={800} easing={'ease-out'}>
+          <FadeIn duration={300} easing={'ease-out'}>
             {/* <img src={StoryImg1} alt=""/> */}
             {onload => (
                 <img
@@ -57,7 +57,7 @@ class StoryImagesWall extends Component {
           </FadeIn>
         </div>
         <div>
-          <FadeIn duration={800} easing={'ease-out'}>
+          <FadeIn duration={300} easing={'ease-out'}>
             {onload => (
                 <img
                     src={StoryImg2}
@@ -67,7 +67,7 @@ class StoryImagesWall extends Component {
           </FadeIn>
         </div>
         <div>
-          <FadeIn duration={800} easing={'ease-out'}>
+          <FadeIn duration={300} easing={'ease-out'}>
             {onload => (
                 <img
                     src={StoryImg3}
