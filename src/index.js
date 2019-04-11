@@ -172,7 +172,7 @@ class App extends Component {
         let btnTarget = e.target
         let removeTransition = (e)=> {
             flowImageWarp.removeEventListener('transitionend',removeTransition,false)
-            if(e.propertyName !== 'opacity') return;
+            if(e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
             if(btnTarget.dataset.name === 'next') {
                 if(this.state.flowIndex < (this.state.flowImage.length - 1)) {
                     this.setState({

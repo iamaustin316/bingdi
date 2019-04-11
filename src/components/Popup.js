@@ -10,7 +10,7 @@ const PopupUI = styled.div`
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   z-index: 100;
   transition: all 800ms ease-in-out;
   opacity: ${props => props.showPopup ? 1 : 0}
@@ -24,7 +24,7 @@ const PopupUI = styled.div`
     transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
     transition: opacity 600ms ease-in-out,transform 600ms ease-in-out;
     img {
-      transition: all 800ms ease-in-out 2000ms;
+      transition: all 800ms ease-in-out 1200ms;
       opacity: ${props => props.showPopup ? 1 : 0}
       max-width: 100%;
       height: auto;
@@ -32,7 +32,7 @@ const PopupUI = styled.div`
       margin: 0;
     }
     &.is-hide {
-      transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+      transform: translate3d(-50%,-50%,0) scale3d(0.5,0.5,0.5);
       opacity: 0;
     }
   }
