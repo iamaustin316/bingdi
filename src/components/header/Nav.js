@@ -7,7 +7,7 @@ const SiteNav = styled.nav`
         width: 108px;
         height: 100vh;
         box-sizing: border-box;
-        padding-top: 64px;
+        padding-top: 48px;
         background-color: #fff;
         position: fixed;
         right: 0;

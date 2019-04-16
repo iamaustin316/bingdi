@@ -5,6 +5,7 @@ import LazyLoad from 'react-lazyload'
 const ProductItem = styled.div`
     width: 25%;
     position: relative;
+    text-align: center;
     & > img {
         display: none;
         width: 96px;
@@ -59,6 +60,7 @@ const ProductItem = styled.div`
 
 const PriceItem = styled.div`
     text-align: center;
+    margin-bottom: 16px;
     span {
         font-size: 14px;
         color: #fff;
@@ -94,6 +96,22 @@ const ProductImg = styled.div`
     }
 `
 
+const ReportBtn = styled.a`
+    box-sizing: border-box;
+    display: block;
+    background-color: #111;
+    padding: 8px 16px;
+    color: #ceb29d;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    &:hover {
+        color: #fff;
+    }
+`
+
 class ProductItems extends Component {
     constructor(props) {
         super(props);
@@ -112,6 +130,7 @@ class ProductItems extends Component {
                     <span><small>原價：$</small>{this.props.oriPrice}</span>
                     <span><small>促銷價：$</small>{this.props.salePrice}</span>
                 </PriceItem>
+                <ReportBtn href="#">商品檢測報告下載</ReportBtn>
             </ProductItem>
         );
     }

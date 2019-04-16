@@ -6,25 +6,28 @@ const ALink = styled.a`
     font-size: 14px;
     color: #4b3b2f;
     text-decoration: none;
-    margin: 0 16px;
     vertical-align: middle;
     line-height: 48px;
     transition: all 500ms ease-in;
     border-bottom: solid 1px transparent;
-    padding: 4px 0;
+    padding: 0 16px;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
     &:hover {
-        color: #29190d;
-        border-bottom-color: #29190d;
+        color: #fff;
+        background-color: #29190d;
     }
     @media (max-width: 980px) {
-        width: 64px;
-        margin: 0 auto 16px;
+        width: 100%;
         display: block;
+        height: 32px;
         text-align: center;
-        line-height: 20px;
+        line-height: 32px;
     }
     &.is-active {
-        border-bottom-color: #29190d;
+        color: #fff;
+        background-color: #29190d;
     }
 `
 class Btn extends Component {
