@@ -120,7 +120,7 @@ class ProductItems extends Component {
         return ( 
             <ProductItem>
                 <LazyLoad><img src={this.props.imageIllUrl} alt={this.props.name}/></LazyLoad>
-                <ProductImg>
+                <ProductImg onClick={this.props.openFn}>
                     <LazyLoad><img src={this.props.imageUrl} alt={this.props.name}/></LazyLoad>
                 </ProductImg>
                 <h2>{this.props.name}</h2>

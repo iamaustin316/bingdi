@@ -64,7 +64,7 @@ class Index extends Component {
                 <SectionBlockInnerFlex>
                 {
                     this.state.products.map((el,index)=>{
-                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} nameEN={el.nameEN} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml}></ProductItems>
+                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} nameEN={el.nameEN} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml} openFn={this.props.openFn}></ProductItems>
                     })
                 }
                 </SectionBlockInnerFlex>

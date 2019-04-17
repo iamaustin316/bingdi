@@ -15,7 +15,8 @@ import Disclaimer from './components/disclaimer/Disclaimer'
 import Footer from './components/footer/Footer'
 import ScrollPageTo from './components/ScrollPageTop'
 import Popup from './components/Popup'
-import styled from 'styled-components';
+import PopupTable from './components/PopupTable'
+import styled from 'styled-components'
 import _ from 'lodash'
 import 'normalize.css'
 import './css/App.css'
@@ -100,7 +101,116 @@ class App extends Component {
             ],
             flowIndex: 0,
             showPopup: false,
-            popupImage: null
+            showPopupTable: true,
+            popupImage: null,
+            elements: [
+                {
+                    "coffee1": [
+                        {
+                            name: "熱量",value: "7.7"
+                        },
+                        {
+                            name: "熱量2",value: "7.72"
+                        },
+                        {
+                            name: "熱量3",value: "7.74"
+                        },
+                        {
+                            name: "熱量4",value: "7.7"
+                        },
+                        {
+                            name: "熱量5",value: "7.7"
+                        },
+                        {
+                            name: "熱量6",value: "7.72"
+                        },
+                        {
+                            name: "熱量7",value: "7.74"
+                        },
+                        {
+                            name: "熱量8",value: "7.7"
+                        }
+                    ],
+                    "coffee1": [
+                        {
+                            name: "熱量",value: "7.7"
+                        },
+                        {
+                            name: "熱量2",value: "7.72"
+                        },
+                        {
+                            name: "熱量3",value: "7.74"
+                        },
+                        {
+                            name: "熱量4",value: "7.7"
+                        },
+                        {
+                            name: "熱量5",value: "7.7"
+                        },
+                        {
+                            name: "熱量6",value: "7.72"
+                        },
+                        {
+                            name: "熱量7",value: "7.74"
+                        },
+                        {
+                            name: "熱量8",value: "7.7"
+                        }
+                    ],
+                    "coffee2": [
+                        {
+                            name: "熱量",value: "7.7"
+                        },
+                        {
+                            name: "熱量2",value: "7.72"
+                        },
+                        {
+                            name: "熱量3",value: "7.74"
+                        },
+                        {
+                            name: "熱量4",value: "7.7"
+                        },
+                        {
+                            name: "熱量5",value: "7.7"
+                        },
+                        {
+                            name: "熱量6",value: "7.72"
+                        },
+                        {
+                            name: "熱量7",value: "7.74"
+                        },
+                        {
+                            name: "熱量8",value: "7.7"
+                        }
+                    ]
+                    ,"coffee3": [
+                        {
+                            name: "熱量",value: "7.7"
+                        },
+                        {
+                            name: "熱量2",value: "7.72"
+                        },
+                        {
+                            name: "熱量3",value: "7.74"
+                        },
+                        {
+                            name: "熱量4",value: "7.7"
+                        },
+                        {
+                            name: "熱量5",value: "7.7"
+                        },
+                        {
+                            name: "熱量6",value: "7.72"
+                        },
+                        {
+                            name: "熱量7",value: "7.74"
+                        },
+                        {
+                            name: "熱量8",value: "7.7"
+                        }
+                    ]
+                }
+            ]
         }
     }
     componentDidMount = () => {
@@ -167,6 +277,11 @@ class App extends Component {
             flowIndex: Number(event.target.dataset.index)
         });
     }
+    openPopupTableFN = (event) => {
+        this.setState({
+            showPopupTable: !this.state.showPopupTable
+        });
+    }
     onClickSwitch = (e) => {
         flowImageWarp.classList.add('is-hide')
         let btnTarget = e.target
@@ -198,13 +313,18 @@ class App extends Component {
                     });
                 }
             }
-             flowImageWarp.classList.remove('is-hide');
+            flowImageWarp.classList.remove('is-hide');
         }
         flowImageWarp.addEventListener('transitionend',removeTransition,false)
     }
-    openCloseFN = () => {
+    closePopupFN = () => {
         this.setState({
             showPopup: !this.state.showPopup
+        });
+    }
+    closePopupTableFN = () => {
+        this.setState({
+            showPopupTable: !this.state.showPopupTable
         });
     }
     render() {
@@ -213,7 +333,7 @@ class App extends Component {
                 <Header></Header>
                 <main>
                     <Kv></Kv>
-                    <Product idName='product'></Product>
+                    <Product idName='product' openFn={this.openPopupTableFN}></Product>
                     <HowToBuy idName='howtobuy'></HowToBuy>
                     <Payment idName='payment'></Payment>
                     <Story idName='story'></Story>
@@ -225,7 +345,8 @@ class App extends Component {
                     <Disclaimer idName='disclaimer'></Disclaimer>
                 </main>
                 <Footer></Footer>
-                <Popup show={this.state.showPopup} closeFN={this.openCloseFN} imageName={this.state.popupImage} onClickSwitch={this.onClickSwitch}></Popup>
+                <Popup show={this.state.showPopup} closeFN={this.closePopupFN} imageName={this.state.popupImage} onClickSwitch={this.onClickSwitch}></Popup>
+                <PopupTable show={this.state.showPopupTable} elements={this.state.elements} closeFN={this.closePopupTableFN} ></PopupTable>
                 <BtnTop id="btn-top" onClick={this.onClickGoTopFN}></BtnTop>
             </div>
         );
