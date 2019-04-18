@@ -23,9 +23,14 @@ module.exports = {
       {
         test: /\.woff(2)?(\?[a-z0-9]+)?$/,
         loader: "url-loader?limit=10000&mimetype=application/font-woff?name=fonts/[name].[ext]"
-      }, {
+      },
+      {
         test: /\.(ttf|eot|svg)(\?[a-z0-9]+)?$/,
         loader: "file-loader?name=fonts/[name].[ext]"
+      },
+      {
+        test: /\.pdf$/,
+        loader: "file-loader?name=pdf/[name].[ext]"
       },
       {
           test: /\.(jpe?g|gif|png|svg)$/i,

@@ -26,7 +26,8 @@ class Index extends Component {
                     ml: '300',
                     oriPrice: '200',
                     salePrice: '150',
-                    elementKey: 'classic'
+                    elementKey: 'classic',
+                    pdf: './pdf/JT201904-0140.pdf'
                 },{
                     imageUrl: productImage2,
                     imgaeIllUrl: productImageIll2,
@@ -36,7 +37,8 @@ class Index extends Component {
                     ml: '300',
                     oriPrice: '200',
                     salePrice: '150',
-                    elementKey: 'latte'
+                    elementKey: 'latte',
+                    pdf: './pdf/JT201904-0141.pdf'
                 },{
                     imageUrl: productImage3,
                     imgaeIllUrl: productImageIll3,
@@ -46,7 +48,8 @@ class Index extends Component {
                     ml: '300',
                     oriPrice: '200',
                     salePrice: '150',
-                    elementKey: 'honey'
+                    elementKey: 'honey',
+                    pdf: './pdf/JT201904-0142.pdf'
                 },{
                     imageUrl: productImage4,
                     imgaeIllUrl: productImageIll4,
@@ -56,7 +59,8 @@ class Index extends Component {
                     ml: '300',
                     oriPrice: '180',
                     salePrice: '130',
-                    elementKey: 'fruit'
+                    elementKey: 'fruit',
+                    pdf: './pdf/JT201904-0143.pdf'
                 }
             ]
         }
@@ -68,7 +72,7 @@ class Index extends Component {
                 <SectionBlockInnerFlex>
                 {
                     this.state.products.map((el,index)=>{
-                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} nameEN={el.nameEN} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml} openFn={this.props.openFn}></ProductItems>
+                        return <ProductItems key={index} imageUrl={el.imageUrl} imageIllUrl={el.imgaeIllUrl} name={el.name} nameEN={el.nameEN} desc={el.desc} oriPrice={el.oriPrice} salePrice={el.salePrice} ml={el.ml} openFn={this.props.openFn} elementKey={el.elementKey} pdf={el.pdf}></ProductItems>
                     })
                 }
                 </SectionBlockInnerFlex>

@@ -85,9 +85,16 @@ const ProductImg = styled.div`
     position: relative;
     z-index: 1;
     img {
+        cursor: pointer;
         max-width: 80px;
         display: block;
         margin: 0 auto 32px auto;
+        transition: transform 800ms ease-in-out;
+    }
+    &:hover {
+        img {
+            transform: translateY(-3%);
+        }
     }
     @media (max-width: 800px) {
         img {
@@ -121,7 +128,7 @@ class ProductItems extends Component {
             <ProductItem>
                 <LazyLoad><img src={this.props.imageIllUrl} alt={this.props.name}/></LazyLoad>
                 <ProductImg onClick={this.props.openFn}>
-                    <LazyLoad><img src={this.props.imageUrl} alt={this.props.name}/></LazyLoad>
+                    <LazyLoad><img src={this.props.imageUrl} alt={this.props.name} data-table={this.props.elementKey}/></LazyLoad>
                 </ProductImg>
                 <h2>{this.props.name}</h2>
                 <h3>{this.props.nameEN}</h3>
@@ -130,7 +137,7 @@ class ProductItems extends Component {
                     <span><small>原價：$</small>{this.props.oriPrice}</span>
                     <span><small>促銷價：$</small>{this.props.salePrice}</span>
                 </PriceItem>
-                <ReportBtn href="#">商品檢測報告下載</ReportBtn>
+                <ReportBtn href={this.props.pdf} target='_blank' download={this.props.name + '檢測報告.pdf'}>商品檢測報告下載</ReportBtn>
             </ProductItem>
         );
     }

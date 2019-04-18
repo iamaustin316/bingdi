@@ -64,13 +64,11 @@
 
 html {
   font-family: 'Montserrat', 'Noto Sans TC', PingFangTC-Medium, "微軟正黑體", "Microsoft JhengHei", "Arial Unicode MS";
-  /* height: 100%; */
 }
 
 body {
   background: #2d221f url(../images/dark_wood_@2X.jpg) repeat 0 0 fixed;
   background-size: 512px 512px;
-  /* height: 100%; */
   position: relative;
 }
 

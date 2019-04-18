@@ -29,7 +29,7 @@ const KvHeading = styled.div`
     transform: translate3d(-50%,-120%,0);
     text-align: center;
     h2 {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 500;
         color: #4b3b2f;
         letter-spacing: 10px;
@@ -41,6 +41,7 @@ const KvHeading = styled.div`
         }
         @media (max-width: 800px) {
             font-size: 20px;
+            letter-spacing: 5px;
         }
     }
     button {

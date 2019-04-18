@@ -105,112 +105,113 @@ class App extends Component {
             popupImage: null,
             elements: [
                 {
-                    "coffee1": [
+                    "classic": [
                         {
-                            name: "熱量",value: "7.7"
+                            name: "熱量",value: "23.1大卡"
                         },
                         {
-                            name: "熱量2",value: "7.72"
+                            name: "蛋白質",value: "1.8公克"
                         },
                         {
-                            name: "熱量3",value: "7.74"
+                            name: "脂肪",value: "0.3公克"
                         },
                         {
-                            name: "熱量4",value: "7.7"
+                            name: "飽和脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量5",value: "7.7"
+                            name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量6",value: "7.72"
+                            name: "碳水化合物",value: "3.3公克"
                         },
                         {
-                            name: "熱量7",value: "7.74"
+                            name: "糖",value: "0.0公克"
                         },
                         {
-                            name: "熱量8",value: "7.7"
+                            name: "鈉",value: "0毫克"
                         }
                     ],
-                    "coffee2": [
+                    "latte": [
                         {
-                            name: "熱量",value: "7.7"
+                            name: "熱量",value: "113.7大卡"
                         },
                         {
-                            name: "熱量2",value: "7.72"
+                            name: "蛋白質",value: "6.3公克"
                         },
                         {
-                            name: "熱量3",value: "7.74"
+                            name: "脂肪",value: "5.7公克"
                         },
                         {
-                            name: "熱量4",value: "7.7"
+                            name: "飽和脂肪酸",value: "3.6公克"
                         },
                         {
-                            name: "熱量5",value: "7.7"
+                            name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量6",value: "7.72"
+                            name: "碳水化合物",value: "9.3公克"
                         },
                         {
-                            name: "熱量7",value: "7.74"
+                            name: "糖",value: "6.0公克"
                         },
                         {
-                            name: "熱量8",value: "7.7"
+                            name: "鈉",value: "63毫克"
                         }
                     ],
-                    "coffee3": [
+                    "honey": [
                         {
-                            name: "熱量",value: "7.7"
+                            name: "熱量",value: "124.8大卡"
                         },
                         {
-                            name: "熱量2",value: "7.72"
+                            name: "蛋白質",value: "1.2公克"
                         },
                         {
-                            name: "熱量3",value: "7.74"
+                            name: "脂肪",value: "0.0公克"
                         },
                         {
-                            name: "熱量4",value: "7.7"
+                            name: "飽和脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量5",value: "7.7"
+                            name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量6",value: "7.72"
+                            name: "碳水化合物",value: "30.公克"
                         },
                         {
-                            name: "熱量7",value: "7.74"
+                            name: "糖",value: "25.5公克"
                         },
                         {
-                            name: "熱量8",value: "7.7"
+                            name: "鈉",value: "0毫克"
                         }
                     ],
-                    "coffee4": [
+                    "fruit": [
                         {
-                            name: "熱量",value: "7.7"
+                            name: "熱量",value: "86.7大卡"
                         },
                         {
-                            name: "熱量2",value: "7.72"
+                            name: "蛋白質",value: "1.8公克"
                         },
                         {
-                            name: "熱量3",value: "7.74"
+                            name: "脂肪",value: "0.3公克"
                         },
                         {
-                            name: "熱量4",value: "7.7"
+                            name: "飽和脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量5",value: "7.7"
+                            name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "熱量6",value: "7.72"
+                            name: "碳水化合物",value: "19.2公克"
                         },
                         {
-                            name: "熱量7",value: "7.74"
+                            name: "糖",value: "16.8公克"
                         },
                         {
-                            name: "熱量8",value: "7.7"
+                            name: "鈉",value: "0毫克"
                         }
                     ]
                 }
-            ]
+            ],
+            defaultTable: 'classic'
         }
     }
     componentDidMount = () => {
@@ -278,8 +279,10 @@ class App extends Component {
         });
     }
     openPopupTableFN = (event) => {
+        console.log(event.target.dataset.table)
         this.setState({
-            showPopupTable: !this.state.showPopupTable
+            showPopupTable: !this.state.showPopupTable,
+            defaultTable: event.target.dataset.table         
         });
     }
     onClickSwitch = (e) => {
@@ -346,7 +349,7 @@ class App extends Component {
                 </main>
                 <Footer></Footer>
                 <Popup show={this.state.showPopup} closeFN={this.closePopupFN} imageName={this.state.popupImage} onClickSwitch={this.onClickSwitch}></Popup>
-                <PopupTable show={this.state.showPopupTable} elements={this.state.elements} closeFN={this.closePopupTableFN} ></PopupTable>
+                <PopupTable show={this.state.showPopupTable} elements={this.state.elements} closeFN={this.closePopupTableFN} table={this.state.defaultTable} ></PopupTable>
                 <BtnTop id="btn-top" onClick={this.onClickGoTopFN}></BtnTop>
             </div>
         );

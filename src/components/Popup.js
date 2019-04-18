@@ -52,6 +52,7 @@ const CloseBtn = styled.button`
   background-color: transparent;
   border: 0;
   padding: 0;
+  cursor: pointer;
   &::before {
     content: "";
     width: 20px;

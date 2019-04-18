@@ -52,6 +52,7 @@ const CloseBtn = styled.button`
   background-color: transparent;
   border: 0;
   padding: 0;
+  cursor: pointer;
   &::before {
     content: "";
     width: 20px;
@@ -81,12 +82,12 @@ const ElementTable = styled.table`
     width: 50%; 
     color: #000;
     font-size: 14px;
-    border: solid 1px #fff;
+    border: solid 1px #a18d7a;
     padding: 8px 16px;
-    background-color: #fff;
+    background-color: #a18d7a;
   }
   td {
-    border: solid 1px #fff;
+    border: solid 1px #a18d7a;
     padding: 8px 16px;
     color: #fff;
     font-size: 14px;
@@ -108,14 +109,16 @@ class PopupTable extends Component {
   constructor (props) {
     super(props);
     this.state = {
-
+      table: this.props.table
     }
   }
+  
   render () { 
     return (
       <PopupUI showPopup={this.props.show}>
         <CloseBtn onClick={this.props.closeFN}></CloseBtn>
         <div className='inner'>
+          <ElementText>每一份量300毫升，本包裝含3份</ElementText>
           <ElementTable>
             <thead>
               <tr>
@@ -125,7 +128,7 @@ class PopupTable extends Component {
             </thead>
             <tbody>
               {
-                this.props.elements[0].coffee1.map((el, index)=>{
+                this.props.elements[0][this.props.table].map((el, index)=>{
                   return <tr key={index}>
                     <td>{el.name}</td>
                     <td>{el.value}</td>
