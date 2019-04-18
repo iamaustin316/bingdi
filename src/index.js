@@ -101,36 +101,10 @@ class App extends Component {
             ],
             flowIndex: 0,
             showPopup: false,
-            showPopupTable: true,
+            showPopupTable: false,
             popupImage: null,
             elements: [
                 {
-                    "coffee1": [
-                        {
-                            name: "熱量",value: "7.7"
-                        },
-                        {
-                            name: "熱量2",value: "7.72"
-                        },
-                        {
-                            name: "熱量3",value: "7.74"
-                        },
-                        {
-                            name: "熱量4",value: "7.7"
-                        },
-                        {
-                            name: "熱量5",value: "7.7"
-                        },
-                        {
-                            name: "熱量6",value: "7.72"
-                        },
-                        {
-                            name: "熱量7",value: "7.74"
-                        },
-                        {
-                            name: "熱量8",value: "7.7"
-                        }
-                    ],
                     "coffee1": [
                         {
                             name: "熱量",value: "7.7"
@@ -182,8 +156,34 @@ class App extends Component {
                         {
                             name: "熱量8",value: "7.7"
                         }
-                    ]
-                    ,"coffee3": [
+                    ],
+                    "coffee3": [
+                        {
+                            name: "熱量",value: "7.7"
+                        },
+                        {
+                            name: "熱量2",value: "7.72"
+                        },
+                        {
+                            name: "熱量3",value: "7.74"
+                        },
+                        {
+                            name: "熱量4",value: "7.7"
+                        },
+                        {
+                            name: "熱量5",value: "7.7"
+                        },
+                        {
+                            name: "熱量6",value: "7.72"
+                        },
+                        {
+                            name: "熱量7",value: "7.74"
+                        },
+                        {
+                            name: "熱量8",value: "7.7"
+                        }
+                    ],
+                    "coffee4": [
                         {
                             name: "熱量",value: "7.7"
                         },

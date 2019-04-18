@@ -25,7 +25,8 @@ class Index extends Component {
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
-                    salePrice: '150'
+                    salePrice: '150',
+                    elementKey: 'classic'
                 },{
                     imageUrl: productImage2,
                     imgaeIllUrl: productImageIll2,
@@ -34,7 +35,8 @@ class Index extends Component {
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
-                    salePrice: '150'
+                    salePrice: '150',
+                    elementKey: 'latte'
                 },{
                     imageUrl: productImage3,
                     imgaeIllUrl: productImageIll3,
@@ -43,7 +45,8 @@ class Index extends Component {
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '200',
-                    salePrice: '150'
+                    salePrice: '150',
+                    elementKey: 'honey'
                 },{
                     imageUrl: productImage4,
                     imgaeIllUrl: productImageIll4,
@@ -52,7 +55,8 @@ class Index extends Component {
                     desc: '肯亞特選豆',
                     ml: '300',
                     oriPrice: '180',
-                    salePrice: '130'
+                    salePrice: '130',
+                    elementKey: 'fruit'
                 }
             ]
         }
