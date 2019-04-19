@@ -112,13 +112,12 @@ class PopupTable extends Component {
       table: this.props.table
     }
   }
-  
   render () { 
     return (
       <PopupUI showPopup={this.props.show}>
         <CloseBtn onClick={this.props.closeFN}></CloseBtn>
         <div className='inner'>
-          <ElementText>每一份量300毫升，本包裝含3份</ElementText>
+          <ElementText>每一份量100毫升，本包裝含1份</ElementText>
           <ElementTable>
             <thead>
               <tr>

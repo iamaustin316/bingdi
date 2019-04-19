@@ -137,7 +137,7 @@ class ProductItems extends Component {
                     <span><small>原價：$</small>{this.props.oriPrice}</span>
                     <span><small>促銷價：$</small>{this.props.salePrice}</span>
                 </PriceItem>
-                <ReportBtn href={this.props.pdf} target='_blank' download={this.props.name + '檢測報告.pdf'}>商品檢測報告下載</ReportBtn>
+                <ReportBtn href={this.props.pdf} target='_blank'>商品檢測報告下載</ReportBtn>
             </ProductItem>
         );
     }

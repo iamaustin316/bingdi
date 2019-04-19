@@ -11,6 +11,11 @@ import productImageIll2 from '../../images/product-2-ill.png'
 import productImageIll3 from '../../images/product-3-ill.png'
 import productImageIll4 from '../../images/product-4-ill.png'
 import { SectionBlock, SectionBlockInnerFlex } from '../SectionBlock'
+import pdf1 from '../../pdf/JT201904-0140.pdf'
+import pdf2 from '../../pdf/JT201904-0141.pdf'
+import pdf3 from '../../pdf/JT201904-0142.pdf'
+import pdf4 from '../../pdf/JT201904-0143.pdf'
+
 
 class Index extends Component {
     constructor(props) {

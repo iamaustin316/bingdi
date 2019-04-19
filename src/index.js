@@ -107,13 +107,13 @@ class App extends Component {
                 {
                     "classic": [
                         {
-                            name: "熱量",value: "23.1大卡"
+                            name: "熱量",value: "7.7大卡"
                         },
                         {
-                            name: "蛋白質",value: "1.8公克"
+                            name: "蛋白質",value: "0.6公克"
                         },
                         {
-                            name: "脂肪",value: "0.3公克"
+                            name: "脂肪",value: "0.1公克"
                         },
                         {
                             name: "飽和脂肪酸",value: "0.0公克"
@@ -122,7 +122,7 @@ class App extends Component {
                             name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "碳水化合物",value: "3.3公克"
+                            name: "碳水化合物",value: "1.1公克"
                         },
                         {
                             name: "糖",value: "0.0公克"
@@ -133,36 +133,36 @@ class App extends Component {
                     ],
                     "latte": [
                         {
-                            name: "熱量",value: "113.7大卡"
+                            name: "熱量",value: "37.9大卡"
                         },
                         {
-                            name: "蛋白質",value: "6.3公克"
+                            name: "蛋白質",value: "2.1公克"
                         },
                         {
-                            name: "脂肪",value: "5.7公克"
+                            name: "脂肪",value: "1.9公克"
                         },
                         {
-                            name: "飽和脂肪酸",value: "3.6公克"
+                            name: "飽和脂肪酸",value: "1.2公克"
                         },
                         {
                             name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "碳水化合物",value: "9.3公克"
+                            name: "碳水化合物",value: "3.1公克"
                         },
                         {
-                            name: "糖",value: "6.0公克"
+                            name: "糖",value: "2.0公克"
                         },
                         {
-                            name: "鈉",value: "63毫克"
+                            name: "鈉",value: "21毫克"
                         }
                     ],
                     "honey": [
                         {
-                            name: "熱量",value: "124.8大卡"
+                            name: "熱量",value: "41.6大卡"
                         },
                         {
-                            name: "蛋白質",value: "1.2公克"
+                            name: "蛋白質",value: "0.4公克"
                         },
                         {
                             name: "脂肪",value: "0.0公克"
@@ -174,10 +174,10 @@ class App extends Component {
                             name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "碳水化合物",value: "30.公克"
+                            name: "碳水化合物",value: "10.0公克"
                         },
                         {
-                            name: "糖",value: "25.5公克"
+                            name: "糖",value: "8.5公克"
                         },
                         {
                             name: "鈉",value: "0毫克"
@@ -185,13 +185,13 @@ class App extends Component {
                     ],
                     "fruit": [
                         {
-                            name: "熱量",value: "86.7大卡"
+                            name: "熱量",value: "28.9大卡"
                         },
                         {
-                            name: "蛋白質",value: "1.8公克"
+                            name: "蛋白質",value: "0.6公克"
                         },
                         {
-                            name: "脂肪",value: "0.3公克"
+                            name: "脂肪",value: "0.1公克"
                         },
                         {
                             name: "飽和脂肪酸",value: "0.0公克"
@@ -200,10 +200,10 @@ class App extends Component {
                             name: "反式脂肪酸",value: "0.0公克"
                         },
                         {
-                            name: "碳水化合物",value: "19.2公克"
+                            name: "碳水化合物",value: "6.4公克"
                         },
                         {
-                            name: "糖",value: "16.8公克"
+                            name: "糖",value: "5.6公克"
                         },
                         {
                             name: "鈉",value: "0毫克"
