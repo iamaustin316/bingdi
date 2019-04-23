@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'js/index_bundle.js'
+    filename: 'js/index_bundle.[chunkhash].js'
   },
   module: {
     rules: [
@@ -35,7 +35,7 @@ module.exports = {
       {
           test: /\.(jpe?g|gif|png|svg)$/i,
           use: [
-            'file-loader?name=images/[name].[ext]',
+            'file-loader?name=images/[name].[hash].[ext]',
             {
                 loader: 'image-webpack-loader',
                 options: {
