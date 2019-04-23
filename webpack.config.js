@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'js/index_bundle.[chunkhash].js'
+    filename: 'js/index_bundle.[hash].js'
   },
   module: {
     rules: [

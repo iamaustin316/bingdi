@@ -14,7 +14,7 @@ class HowToBuy extends Component {
           name: '零售',
           remind: [
             '不限。',
-            '配合下載APP線上訂餐UberEATS餐飲外送服務區域(線上刷卡付費)。'
+            '配合下載APP線上訂餐<a href="https://www.ubereats.com/blog/zh-TW/taiwan/" target="_blank">UberEATS</a>餐飲外送服務區域(線上刷卡付費)。'
           ],
           type: [
             '數量',
@@ -46,7 +46,7 @@ class HowToBuy extends Component {
           icon: 'icon-event',
           name: '展演活動',
           remind: [
-            '保溫桶(15L)；單日限購2桶。<br>保溫桶(5L)；單日限購4桶。',
+            '保溫桶(15L)；單日限購2桶。保溫桶(5L)；單日限購4桶。',
             '響應環保，可提供公司、企業及機關單位保溫桶15L及5L(4小時保溫5°C以下，附加冰塊)展演活動飲用，請提前3日前預購，於臺北捷運「徐匯中學」站2號出口自取並送回空桶，可享原價8折(商品特價期間再享折扣)。'
           ],
           type: [

@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const HowToBuyItem = styled.div`
-  width: 25%;
+  width: 50%;
   box-sizing: border-box;
   padding: 0 16px;
+  margin-bottom: 32px;
   h3 {
     font-size: 20px;
     text-align: center;
@@ -57,6 +58,16 @@ const Remind = styled.li`
   padding-top: 16px;
   margin-bottom: 16px;
   letter-spacing: 1px;
+  a {
+    color: #d4c7bf;
+    text-decoration: none;
+    border-bottom: solid 1px #d4c7bf;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
   &:last-child {
     border-bottom: 0;
   }
