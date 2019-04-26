@@ -21,9 +21,7 @@ const ALink = styled.a`
     @media (max-width: 980px) {
         width: 100%;
         display: block;
-        height: 32px;
         text-align: center;
-        line-height: 32px;
     }
     &.is-active {
         color: #fff;
