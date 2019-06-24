@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
+import Loading from './components/Loading'
 import Header from './components/header/Header'
 import Kv from './components/kv/Kv'
 import Product from './components/product/Product'
@@ -221,9 +222,14 @@ class App extends Component {
         const siteHeader = document.querySelector('#siteHeader')
         const sections = document.querySelectorAll('section')
         const flowImageWarp = document.querySelector('#flowImageWarp')
-        this.setState({
-            popupImage: this.state.flowImage[this.state.flowIndex]
-        })
+        const loading = document.querySelector('#loading')
+        loading.classList.add('loaded')
+        setTimeout(() => {
+            this.setState({
+                popupImage: this.state.flowImage[this.state.flowIndex]
+            })
+        }, 10)
+        
         window.addEventListener('scroll', _.debounce(
             (e) => {
                 if (window.pageYOffset >= 1) {
@@ -335,6 +341,7 @@ class App extends Component {
     render() {
         return (
             <div className='wrap'>
+                <Loading></Loading>
                 <Header></Header>
                 <main>
                     <Kv></Kv>
