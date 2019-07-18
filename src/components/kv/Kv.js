@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import kvImg from '../../images/kv.jpg'
 import kvImgM from '../../images/kv-m.jpg'
+import logoImg from '../../images/bing-di-logo@3x.png'
 
 const KvSection = styled.section`
     width: 100%;
@@ -28,6 +29,17 @@ const KvHeading = styled.div`
     z-index: 1;
     transform: translate3d(-50%,-120%,0);
     text-align: center;
+    @media (max-width: 800px) {
+        transform: translate3d(-50%,-70%,0);
+    }
+    img {
+        width: 200px;
+        display: block;
+        margin: 0 auto 16px;
+        @media (max-width: 800px) {
+            width: 160px;
+        }
+    }
     h2 {
         font-size: 24px;
         font-weight: 500;
@@ -81,8 +93,8 @@ class Kv extends Component {
         return (
             <KvSection>
                 <KvHeading>
-                    <h2>回甘的咖啡<strong>要用時間來等待</strong></h2>
-                    <button onClick={this.clickBuyFN} type="button">立即體驗</button>
+                    <img src={logoImg} alt="冰帝咖啡"/>
+                    <h2>網站更新中，造成不便請包涵</h2>
                 </KvHeading>
                 <picture>
                     <source srcSet={kvImgM} media="(max-width: 59em) and (orientation: portrait)" />
