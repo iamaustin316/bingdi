@@ -19,10 +19,10 @@ import Kv from './components/kv/Kv'
 // import PopupTable from './components/PopupTable'
 // import styled from 'styled-components'
 // import _ from 'lodash'
-// import './images/fb-cover.jpg'
-// import './images/favicon.png'
-// import 'normalize.css'
-// import './css/App.css'
+import './images/fb-cover.jpg'
+import './images/favicon.png'
+import 'normalize.css'
+import './css/App.css'
 // const BtnTop = styled.button`
 //     z-index: 100;
 //     width: 32px;
@@ -181,7 +181,8 @@ class App extends Component {
         }
     }
     componentDidMount = () => {
-        
+        const loading = document.querySelector('#loading')
+        loading.classList.add('loaded')
     }
     render() {
         return (
