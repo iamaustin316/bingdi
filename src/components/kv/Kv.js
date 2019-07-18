@@ -93,7 +93,7 @@ class Kv extends Component {
         return (
             <KvSection>
                 <KvHeading>
-                    <img src={logoImg}/>
+                    <img src={logoImg} alt="冰帝咖啡"/>
                     <h2>網站更新中，造成不便請包涵</h2>
                 </KvHeading>
                 <picture>
