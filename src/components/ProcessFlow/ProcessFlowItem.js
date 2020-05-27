@@ -75,7 +75,7 @@ class ProcessFlowItem extends Component {
                         />
                     )}
                 </FadeIn>
-                {/* <img src={this.props.stepImg} alt={this.props.desc}/> */}
+                <img src={this.props.stepImg} alt={this.props.desc}/>
             </ProcessFlowItems>
         );
     }
